@@ -34,7 +34,7 @@ export default function DialogCloseButton() {
             </Label>
             <Input
               id="link"
-              defaultValue="https://forge-ui.pages.dev/docs/installation"
+              defaultValue="https://forge-ui..dev/docs/installation"
               readOnly
             />
           </div>

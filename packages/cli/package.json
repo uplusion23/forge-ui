@@ -1,5 +1,5 @@
 {
-  "name": "shadcn-ui",
+  "name": "@uplusion23/forge-ui",
   "version": "0.8.0",
   "description": "Add components to your apps.",
   "publishConfig": {
@@ -7,12 +7,12 @@
   },
   "license": "MIT",
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "uplusion23",
+    "url": "https://github.com/uplusion23"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shadcn/ui.git",
+    "url": "https://github.com/uplusion23/forge-ui.git",
     "directory": "packages/cli"
   },
   "files": [

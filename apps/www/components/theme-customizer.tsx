@@ -184,8 +184,8 @@ function Customizer() {
           onClick={() => {
             setConfig({
               ...config,
-              theme: "zinc",
-              radius: 0.5,
+              theme: "army",
+              radius: 0.3,
             })
           }}
         >

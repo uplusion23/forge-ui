@@ -13,6 +13,6 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/shadcn",
     github: "https://github.com/shadcn/ui",
-    docs: "https://forge-ui.pages.dev",
+    docs: "https://forge-ui..dev",
   },
 }

@@ -57,7 +57,7 @@ type ProfileFormValues = z.infer<typeof profileFormSchema>
 const defaultValues: Partial<ProfileFormValues> = {
   bio: "I own a computer.",
   urls: [
-    { value: "https://forge-ui.pages.dev" },
+    { value: "https://forge-ui..dev" },
     { value: "http://github.com/uplusion23" },
   ],
 }

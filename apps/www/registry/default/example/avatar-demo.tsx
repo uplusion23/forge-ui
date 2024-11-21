@@ -8,7 +8,7 @@ export default function AvatarDemo() {
   return (
     <Avatar>
       <AvatarImage src="https://github.com/uplusion23.png" alt="@uplusion23" />
-      <AvatarFallback>CN</AvatarFallback>
+      <AvatarFallback>UP</AvatarFallback>
     </Avatar>
   )
 }

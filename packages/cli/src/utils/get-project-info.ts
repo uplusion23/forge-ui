@@ -88,7 +88,7 @@ export async function getProjectConfig(cwd: string): Promise<Config | null> {
   const isTsx = await isTypeScriptProject(cwd)
 
   const config: RawConfig = {
-    $schema: "https://forge-ui.pages.dev/schema.json",
+    $schema: "https://forge-ui..dev/schema.json",
     rsc: ["next-app", "next-app-src"].includes(projectType),
     tsx: isTsx,
     style: "austin",

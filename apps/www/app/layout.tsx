@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "uplusion23",
-      url: "https://forge-ui.pages.dev",
+      url: "https://forge-ui.dev",
     },
   ],
   creator: "uplusion23",
