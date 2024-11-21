@@ -166,6 +166,11 @@ export const ui: Registry = [
     files: ["ui/navigation-menu.tsx"],
   },
   {
+    name: "number-ticker",
+    type: "components:ui",
+    files: ["ui/number-ticker.tsx"],
+  },
+  {
     name: "pagination",
     type: "components:ui",
     registryDependencies: ["button"],

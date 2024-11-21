@@ -13,7 +13,7 @@ import {
 import { getPackageManager } from "@/src/utils/get-package-manager"
 import { getProjectConfig, preFlight } from "@/src/utils/get-project-info"
 import { handleError } from "@/src/utils/handle-error"
-import { logger } from "@/src/utils/logger"
+import { banner, logger } from "@/src/utils/logger"
 import {
   getRegistryBaseColor,
   getRegistryBaseColors,
@@ -73,6 +73,7 @@ export const init = new Command()
           projectConfig,
           opts.defaults
         )
+        banner()
         await runInit(cwd, config)
       } else {
         // Read config.
@@ -187,7 +188,7 @@ export async function promptForConfig(
   ])
 
   const config = rawConfigSchema.parse({
-    $schema: process.env.UI_SCHEMA_URL ?? "https://ui.shadcn.com/schema.json",
+    $schema: process.env.UI_SCHEMA_URL ?? "https://forge-ui/schema.json",
     style: options.style,
     tailwind: {
       config: options.tailwindConfig,

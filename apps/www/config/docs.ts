@@ -149,7 +149,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Chart",
           href: "/docs/components/chart",
-          label: "New",
           items: [],
         },
         {
@@ -235,6 +234,12 @@ export const docsConfig: DocsConfig = {
         {
           title: "Navigation Menu",
           href: "/docs/components/navigation-menu",
+          items: [],
+        },
+        {
+          title: "Number Ticker",
+          href: "/docs/components/number-ticker",
+          label: "New",
           items: [],
         },
         {

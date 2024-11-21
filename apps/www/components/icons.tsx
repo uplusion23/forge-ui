@@ -2,49 +2,14 @@ type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
   logo: (props: IconProps) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
-      <rect width="256" height="256" fill="none" />
-      <line
-        x1="208"
-        y1="128"
-        x2="128"
-        y2="208"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-      <line
-        x1="192"
-        y1="40"
-        x2="40"
-        y2="192"
-        fill="none"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="16"
-      />
-    </svg>
-  ),
-  logo2: (props: IconProps) => (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 211 211"
-      fill="none"
       {...props}
+      viewBox="0 0 154 231"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M84.4 168.8C84.4 192.107 65.5064 211 42.2 211C18.8936 211 1.25514e-07 192.107 1.25514e-07 168.8C1.25514e-07 145.494 18.8936 126.6 42.2 126.6C65.5064 126.6 84.4 145.494 84.4 168.8Z"
-        fill="#FFCB05"
-      />
-      <path
-        d="M0 42.2C2.03751e-06 18.8936 18.8936 -2.03751e-06 42.2 0C65.5064 2.03751e-06 84.4 18.8936 84.4 42.2C84.4 65.5064 65.5064 84.4 42.2 84.4C18.8936 84.4 -2.03751e-06 65.5064 0 42.2Z"
-        fill="#FFCB05"
-      />
-      <path
-        d="M211 42.2C211 18.8936 192.106 1.31052e-05 168.8 1.10677e-05L42.2 0C65.5064 2.03751e-06 84.4 18.8936 84.4 42.2C84.4 65.5064 65.5064 84.4 42.2 84.4L168.8 84.4C192.106 84.4 211 65.5064 211 42.2Z"
+        d="M38.5 231L0 211.75V173.25V134.75L38.5 115.5L0 96.25V57.75L38.5 38.5L77 19.25L115.5 0L154 19.25V57.75L115.5 77L154 96.25V134.75L115.5 154L77 173.25V211.75L38.5 231Z"
         fill="#FFCB05"
       />
     </svg>

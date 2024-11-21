@@ -1,0 +1,70 @@
+---
+title: Number Ticker
+description: A collection of links for navigating websites.
+component: true
+---
+
+<ComponentPreview
+  name="number-ticker-demo"
+  description="A simple number ticker"
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+bunx --bun @uplusion23/forge-ui add number-ticker
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="number-ticker" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { NumberTicker } from "@/components/ui/number-ticker"
+```
+
+```tsx
+<NumberTicker value={100} />
+```
+
+### Props
+
+```ts
+interface NumberTickerProps {
+  value: number
+  direction?: "up" | "down"
+}
+```
+
+## Examples
+
+### Counting down
+
+<ComponentPreview
+  name="number-ticker-demo-down"
+  description="A number ticker that is counting down"
+/>

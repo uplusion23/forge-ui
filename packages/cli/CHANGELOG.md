@@ -1,5 +1,11 @@
 # @shadcn/ui
 
+## 0.9.0
+
+### Minor Changes
+
+- added number-ticker component
+
 ## 0.8.4
 
 ### Patch Changes

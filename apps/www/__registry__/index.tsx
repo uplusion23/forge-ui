@@ -291,6 +291,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "number-ticker": {
+      name: "number-ticker",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/number-ticker")),
+      source: "",
+      files: ["registry/default/ui/number-ticker.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "pagination": {
       name: "pagination",
       type: "components:ui",
@@ -1365,6 +1376,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/navigation-menu-demo")),
       source: "",
       files: ["registry/default/example/navigation-menu-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "number-ticker-demo": {
+      name: "number-ticker-demo",
+      type: "components:example",
+      registryDependencies: ["number-ticker"],
+      component: React.lazy(() => import("@/registry/default/example/number-ticker-demo")),
+      source: "",
+      files: ["registry/default/example/number-ticker-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "number-ticker-demo-down": {
+      name: "number-ticker-demo-down",
+      type: "components:example",
+      registryDependencies: ["number-ticker"],
+      component: React.lazy(() => import("@/registry/default/example/number-ticker-demo-down")),
+      source: "",
+      files: ["registry/default/example/number-ticker-demo-down.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -3603,6 +3636,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "number-ticker": {
+      name: "number-ticker",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/austin/ui/number-ticker")),
+      source: "",
+      files: ["registry/austin/ui/number-ticker.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "pagination": {
       name: "pagination",
       type: "components:ui",
@@ -4677,6 +4721,28 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/austin/example/navigation-menu-demo")),
       source: "",
       files: ["registry/austin/example/navigation-menu-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "number-ticker-demo": {
+      name: "number-ticker-demo",
+      type: "components:example",
+      registryDependencies: ["number-ticker"],
+      component: React.lazy(() => import("@/registry/austin/example/number-ticker-demo")),
+      source: "",
+      files: ["registry/austin/example/number-ticker-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "number-ticker-demo-down": {
+      name: "number-ticker-demo-down",
+      type: "components:example",
+      registryDependencies: ["number-ticker"],
+      component: React.lazy(() => import("@/registry/austin/example/number-ticker-demo-down")),
+      source: "",
+      files: ["registry/austin/example/number-ticker-demo-down.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

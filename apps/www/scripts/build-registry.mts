@@ -25,7 +25,7 @@ async function buildRegistry(registry: Registry) {
   })
 
   async function createTempSourceFile(filename: string) {
-    const dir = await fs.mkdtemp(path.join(tmpdir(), "shadcn-"))
+    const dir = await fs.mkdtemp(path.join(tmpdir(), "forge-ui-"))
     return path.join(dir, filename)
   }
 

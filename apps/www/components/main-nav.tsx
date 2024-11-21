@@ -16,7 +16,7 @@ export function MainNav() {
         href="/"
         className="mr-4 flex shrink-0 items-center space-x-2 lg:mr-6"
       >
-        <Icons.logo2 className="h-4 w-4" />
+        <Icons.logo className="h-4 w-4" />
         <span className="hidden whitespace-nowrap font-bold lg:inline-block">
           {siteConfig.name}
         </span>

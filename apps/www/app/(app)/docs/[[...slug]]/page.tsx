@@ -13,6 +13,7 @@ import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
+import { TracingBeam } from "@/components/tracing-beam"
 import { badgeVariants } from "@/registry/austin/ui/badge"
 import { ScrollArea } from "@/registry/austin/ui/scroll-area"
 
@@ -88,7 +89,12 @@ export default async function DocPage({ params }: DocPageProps) {
 
   return (
     <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
-      <div className="mx-auto w-full min-w-0">
+      <TracingBeam
+        className="mx-auto w-full min-w-0"
+        beamProps={{
+          className: "hidden md:block md:-left-14",
+        }}
+      >
         <div className="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
           <div className="truncate">Docs</div>
           <ChevronRightIcon className="h-3.5 w-3.5" />
@@ -134,7 +140,7 @@ export default async function DocPage({ params }: DocPageProps) {
           <Mdx code={doc.body.code} />
         </div>
         <DocsPager doc={doc} />
-      </div>
+      </TracingBeam>
       {doc.toc && (
         <div className="hidden text-sm xl:block">
           <div className="sticky top-16 -mt-10 pt-4">

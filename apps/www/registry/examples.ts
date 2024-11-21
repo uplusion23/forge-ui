@@ -474,6 +474,18 @@ export const examples: Registry = [
     files: ["example/navigation-menu-demo.tsx"],
   },
   {
+    name: "number-ticker-demo",
+    type: "components:example",
+    registryDependencies: ["number-ticker"],
+    files: ["example/number-ticker-demo.tsx"],
+  },
+  {
+    name: "number-ticker-demo-down",
+    type: "components:example",
+    registryDependencies: ["number-ticker"],
+    files: ["example/number-ticker-demo-down.tsx"],
+  },
+  {
     name: "pagination-demo",
     type: "components:example",
     registryDependencies: ["pagination"],
