@@ -88,10 +88,10 @@ export async function getProjectConfig(cwd: string): Promise<Config | null> {
   const isTsx = await isTypeScriptProject(cwd)
 
   const config: RawConfig = {
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: "https://forge-ui.pages.dev/schema.json",
     rsc: ["next-app", "next-app-src"].includes(projectType),
     tsx: isTsx,
-    style: "new-york",
+    style: "austin",
     tailwind: {
       config: isTsx ? "tailwind.config.ts" : "tailwind.config.js",
       baseColor: "zinc",

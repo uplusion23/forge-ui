@@ -8,9 +8,9 @@ import { Analytics } from "@/components/analytics"
 import { ThemeProvider } from "@/components/providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
+import { Toaster as AustinSonner } from "@/registry/austin/ui/sonner"
+import { Toaster as AustinToaster } from "@/registry/austin/ui/toaster"
 import { Toaster as DefaultToaster } from "@/registry/default/ui/toaster"
-import { Toaster as NewYorkSonner } from "@/registry/new-york/ui/sonner"
-import { Toaster as NewYorkToaster } from "@/registry/new-york/ui/toaster"
 
 export const metadata: Metadata = {
   title: {
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "uplusion23",
+      url: "https://forge-ui.pages.dev",
     },
   ],
-  creator: "shadcn",
+  creator: "uplusion23",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@shadcn",
+    creator: "@uplusion23",
   },
   icons: {
     icon: "/favicon.ico",
@@ -100,9 +100,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <TailwindIndicator />
             <ThemeSwitcher />
             <Analytics />
-            <NewYorkToaster />
+            <AustinToaster />
             <DefaultToaster />
-            <NewYorkSonner />
+            <AustinSonner />
           </ThemeProvider>
         </body>
       </html>

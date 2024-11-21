@@ -12,8 +12,8 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from "@/registry/new-york/ui/resizable"
-import { Tabs, TabsContent } from "@/registry/new-york/ui/tabs"
+} from "@/registry/austin/ui/resizable"
+import { Tabs, TabsContent } from "@/registry/austin/ui/tabs"
 import { Block } from "@/registry/schema"
 
 export function BlockPreview({

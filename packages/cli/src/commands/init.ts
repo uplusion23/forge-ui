@@ -44,7 +44,7 @@ const initOptionsSchema = z.object({
 })
 
 export const init = new Command()
-  .name("init")
+  .name(chalk.blue("init"))
   .description("initialize your project and install dependencies")
   .option("-y, --yes", "skip confirmation prompt.", false)
   .option("-d, --defaults,", "use default configuration.", false)
@@ -187,7 +187,7 @@ export async function promptForConfig(
   ])
 
   const config = rawConfigSchema.parse({
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: process.env.UI_SCHEMA_URL ?? "https://ui.shadcn.com/schema.json",
     style: options.style,
     tailwind: {
       config: options.tailwindConfig,
@@ -385,7 +385,7 @@ export async function runInit(cwd: string, config: Config) {
   // TODO: add support for other icon libraries.
   const deps = [
     ...PROJECT_DEPENDENCIES,
-    config.style === "new-york" ? "@radix-ui/react-icons" : "lucide-react",
+    config.style === "austin" ? "@radix-ui/react-icons" : "lucide-react",
   ]
 
   await execa(

@@ -14,7 +14,7 @@ import { useTheme } from "next-themes"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/austin/ui/button"
 import {
   CommandDialog,
   CommandEmpty,
@@ -23,7 +23,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/registry/new-york/ui/command"
+} from "@/registry/austin/ui/command"
 
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
@@ -56,6 +56,9 @@ export function CommandMenu({ ...props }: DialogProps) {
     command()
   }, [])
 
+  const platform =
+    typeof window !== "undefined" ? window.navigator.platform : ""
+
   return (
     <>
       <Button
@@ -69,7 +72,12 @@ export function CommandMenu({ ...props }: DialogProps) {
         <span className="hidden lg:inline-flex">Search documentation...</span>
         <span className="inline-flex lg:hidden">Search...</span>
         <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-          <span className="text-xs">⌘</span>K
+          {platform.includes("Mac") ? (
+            <span className="text-xs">⌘</span>
+          ) : (
+            <span>Ctrl +</span>
+          )}
+          K
         </kbd>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>

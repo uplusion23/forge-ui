@@ -4,9 +4,9 @@ import * as React from "react"
 
 import { useConfig } from "@/hooks/use-config"
 import { ThemeWrapper } from "@/components/theme-wrapper"
+import CardsAustin from "@/registry/austin/example/cards"
 import CardsDefault from "@/registry/default/example/cards"
 import { Skeleton } from "@/registry/default/ui/skeleton"
-import CardsNewYork from "@/registry/new-york/example/cards"
 
 export function ThemesTabs() {
   const [mounted, setMounted] = React.useState(false)
@@ -64,7 +64,7 @@ export function ThemesTabs() {
         </div>
       ) : (
         <ThemeWrapper>
-          {config.style === "new-york" && <CardsNewYork />}
+          {config.style === "austin" && <CardsAustin />}
           {config.style === "default" && <CardsDefault />}
         </ThemeWrapper>
       )}

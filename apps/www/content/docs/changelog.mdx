@@ -279,7 +279,7 @@ I've been working on a new CLI for the past few weeks. It's a complete rewrite. 
 ### `init`
 
 ```bash
-npx shadcn-ui@latest init
+bunx --bun forge-ui@latest init
 ```
 
 When you run the `init` command, you will be asked a few questions to configure `components.json`:
@@ -321,7 +321,7 @@ This means you can now use the CLI with any directory structure including `src` 
 ### `add`
 
 ```bash
-npx shadcn-ui@latest add
+bunx --bun forge-ui@latest add
 ```
 
 The `add` command is now much more capable. You can now add UI components but also import more complex components (coming soon).
@@ -331,7 +331,7 @@ The CLI will automatically resolve all components and dependencies, format them 
 ### `diff` (experimental)
 
 ```bash
-npx shadcn-ui diff
+bunx --bun forge-ui diff
 ```
 
 We're also introducing a new `diff` command to help you keep track of upstream updates.
@@ -341,7 +341,7 @@ You can use this command to see what has changed in the upstream repository and 
 Run the `diff` command to get a list of components that have updates available:
 
 ```bash
-npx shadcn-ui diff
+bunx --bun forge-ui diff
 ```
 
 ```txt
@@ -356,7 +356,7 @@ The following components have updates available:
 Then run `diff [component]` to see the changes:
 
 ```bash
-npx shadcn-ui diff alert
+bunx --bun forge-ui diff alert
 ```
 
 ```diff /pl-12/
@@ -453,25 +453,25 @@ We are introducing a new concept called _Style_.
 
 _You can think of style as the visual foundation: shapes, icons, animations & typography._ A style comes with its own set of components, animations, icons and more.
 
-We are shipping two styles: `default` and `new-york` (with more coming soon).
+We are shipping two styles: `default` and `austin` (with more coming soon).
 
 <Image
   src="/images/style.jpg"
   width="716"
   height="402"
-  alt="Default vs New York style"
+  alt="Default vs Austin style"
   className="border rounded-lg overflow-hidden mt-6"
 />
 
 The `default` style is the one you are used to. It's the one we've been using since the beginning of this project. It uses `lucide-react` for icons and `tailwindcss-animate` for animations.
 
-The `new-york` style is a new style. It ships with smaller buttons, cards with shadows and a new set of icons from [Radix Icons](https://icons.radix-ui.com).
+The `austin` style is a new style. It ships with smaller buttons, cards with shadows and a new set of icons from [Radix Icons](https://icons.radix-ui.com).
 
 When you run the `init` command, you will be asked which style you would like to use. This is saved in your `components.json` file.
 
 ```json title="components.json"
 {
-  "style": "new-york"
+  "style": "austin"
 }
 ```
 

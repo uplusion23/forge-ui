@@ -13,7 +13,8 @@
         "https_proxy",
         "V0_URL",
         "V0_EDIT_SECRET",
-        "DEPLOYMENT_PROTECTION_BYPASS"
+        "DEPLOYMENT_PROTECTION_BYPASS",
+        "UI_SCHEMA_URL"
       ],
       "outputs": ["dist/**", ".next/**"]
     },

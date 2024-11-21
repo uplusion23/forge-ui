@@ -10,14 +10,13 @@ import {
   SunIcon,
 } from "@radix-ui/react-icons"
 import template from "lodash.template"
-import { Paintbrush } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { cn } from "@/lib/utils"
 import { useConfig } from "@/hooks/use-config"
 import { copyToClipboardWithMeta } from "@/components/copy-button"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/austin/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -25,27 +24,27 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/new-york/ui/dialog"
+} from "@/registry/austin/ui/dialog"
 import {
   Drawer,
   DrawerContent,
   DrawerTrigger,
-} from "@/registry/new-york/ui/drawer"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/registry/austin/ui/drawer"
+import { Label } from "@/registry/austin/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { Skeleton } from "@/registry/new-york/ui/skeleton"
-import { Theme, themes } from "@/registry/themes"
-
-import "@/styles/mdx.css"
+} from "@/registry/austin/ui/popover"
+import { Skeleton } from "@/registry/austin/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/registry/new-york/ui/tooltip"
+} from "@/registry/austin/ui/tooltip"
+import { Theme, themes } from "@/registry/themes"
+
+import "@/styles/mdx.css"
 
 export function ThemeCustomizer() {
   const [config, setConfig] = useConfig()
@@ -210,7 +209,7 @@ function Customizer() {
                 alignOffset={-20}
               >
                 <p className="font-medium">
-                  What is the difference between the New York and Default style?
+                  What is the difference between the Austin and Default style?
                 </p>
                 <p>
                   A style comes with its own set of components, animations,
@@ -222,7 +221,7 @@ function Customizer() {
                   tailwindcss-animate for animations.
                 </p>
                 <p>
-                  The <span className="font-medium">New York</span> style ships
+                  The <span className="font-medium">Austin</span> style ships
                   with smaller buttons and cards with shadows. It uses icons
                   from Radix Icons.
                 </p>
@@ -243,12 +242,12 @@ function Customizer() {
             <Button
               variant={"outline"}
               size="sm"
-              onClick={() => setConfig({ ...config, style: "new-york" })}
+              onClick={() => setConfig({ ...config, style: "austin" })}
               className={cn(
-                config.style === "new-york" && "border-2 border-primary"
+                config.style === "austin" && "border-2 border-primary"
               )}
             >
-              New York
+              Austin
             </Button>
           </div>
         </div>

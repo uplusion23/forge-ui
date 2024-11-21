@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils"
 import { BlockCopyButton } from "@/components/block-copy-button"
 import { ChartCodeViewer } from "@/components/chart-code-viewer"
-import { Separator } from "@/registry/new-york/ui/separator"
+import { Separator } from "@/registry/austin/ui/separator"
 import { Block } from "@/registry/schema"
 
 import "@/styles/mdx.css"

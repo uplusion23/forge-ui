@@ -9,21 +9,17 @@ import { cn } from "@/lib/utils"
 import { useLiftMode } from "@/hooks/use-lift-mode"
 import { BlockCopyButton } from "@/components/block-copy-button"
 import { StyleSwitcher } from "@/components/style-switcher"
-import { V0Button } from "@/components/v0-button"
-import { Badge } from "@/registry/new-york/ui/badge"
-import { Label } from "@/registry/new-york/ui/label"
+import { Badge } from "@/registry/austin/ui/badge"
+import { Label } from "@/registry/austin/ui/label"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/registry/new-york/ui/popover"
-import { Separator } from "@/registry/new-york/ui/separator"
-import { Switch } from "@/registry/new-york/ui/switch"
-import { TabsList, TabsTrigger } from "@/registry/new-york/ui/tabs"
-import {
-  ToggleGroup,
-  ToggleGroupItem,
-} from "@/registry/new-york/ui/toggle-group"
+} from "@/registry/austin/ui/popover"
+import { Separator } from "@/registry/austin/ui/separator"
+import { Switch } from "@/registry/austin/ui/switch"
+import { TabsList, TabsTrigger } from "@/registry/austin/ui/tabs"
+import { ToggleGroup, ToggleGroupItem } from "@/registry/austin/ui/toggle-group"
 import { Block } from "@/registry/schema"
 
 export function BlockToolbar({
@@ -73,7 +69,7 @@ export function BlockToolbar({
             className="space-y-3 rounded-[0.5rem] text-sm"
           >
             <p className="font-medium">
-              What is the difference between the New York and Default style?
+              What is the difference between the Austin and Default style?
             </p>
             <p>
               A style comes with its own set of components, animations, icons
@@ -85,7 +81,7 @@ export function BlockToolbar({
               animations.
             </p>
             <p>
-              The <span className="font-medium">New York</span> style ships with
+              The <span className="font-medium">Austin</span> style ships with
               smaller buttons and inputs. It also uses shadows on cards and
               buttons.
             </p>
@@ -180,16 +176,6 @@ export function BlockToolbar({
             name={block.name}
             code={block.code}
             disabled={isLiftMode}
-          />
-          <V0Button
-            id={`v0-button-${block.name}`}
-            disabled={isLiftMode}
-            block={{
-              name: block.name,
-              description: block.description || "Edit in v0",
-              code: block.code,
-              style: block.style,
-            }}
           />
         </div>
       )}

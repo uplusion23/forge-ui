@@ -4,8 +4,8 @@ export const styles = [
     label: "Default",
   },
   {
-    name: "new-york",
-    label: "New York",
+    name: "austin",
+    label: "Austin",
   },
 ] as const
 

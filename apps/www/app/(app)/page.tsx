@@ -10,7 +10,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/registry/austin/ui/button"
 import MailPage from "@/app/(app)/examples/mail/page"
 
 export default function IndexPage() {

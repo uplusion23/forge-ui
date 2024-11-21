@@ -9,13 +9,12 @@ import { CopyButton } from "@/components/copy-button"
 import { Icons } from "@/components/icons"
 import { StyleSwitcher } from "@/components/style-switcher"
 import { ThemeWrapper } from "@/components/theme-wrapper"
-import { V0Button } from "@/components/v0-button"
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/new-york/ui/tabs"
+} from "@/registry/austin/ui/tabs"
 import { styles } from "@/registry/styles"
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -101,16 +100,6 @@ export function ComponentPreview({
           <div className="flex items-center justify-between p-4">
             <StyleSwitcher />
             <div className="flex items-center gap-2">
-              {config.style === "default" && description ? (
-                <V0Button
-                  block={{
-                    code: codeString,
-                    name,
-                    style: config.style,
-                    description,
-                  }}
-                />
-              ) : null}
               <CopyButton
                 value={codeString}
                 variant="outline"

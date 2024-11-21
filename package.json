@@ -1,12 +1,12 @@
 {
-  "name": "ui",
+  "name": "forge-ui",
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
   "type": "module",
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "uplusion23",
+    "url": "https://github.com/uplusion23"
   },
   "workspaces": [
     "apps/*",
@@ -15,14 +15,14 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "build:cli": "turbo --filter=shadcn-ui build",
-    "build:registry": "pnpm --filter=www build:registry && pnpm format:write",
+    "build:cli": "turbo --filter=forge-ui build",
+    "build:registry": "bun --filter=www build:registry && bun format:write",
     "dev": "turbo run dev --parallel",
-    "cli:dev": "turbo --filter=shadcn-ui dev",
-    "cli:start": "pnpm --filter=shadcn-ui start:dev",
-    "docs:build": "pnpm --filter=www build:docs",
-    "www:dev": "pnpm --filter=www dev",
-    "www:build": "pnpm --filter=www build",
+    "cli:dev": "turbo --filter=forge-ui dev",
+    "cli:start": "bun --filter=forge-ui start:dev",
+    "docs:build": "bun --filter=www build:docs",
+    "www:dev": "bun --filter=www dev",
+    "www:build": "bun --filter=www build",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "preview": "turbo run preview",
@@ -32,11 +32,11 @@
     "sync:templates": "./scripts/sync-templates.sh \"templates/*\"",
     "check": "turbo lint typecheck format:check",
     "release": "changeset version",
-    "pub:beta": "cd packages/cli && pnpm pub:beta",
-    "pub:release": "cd packages/cli && pnpm pub:release",
+    "pub:beta": "cd packages/cli && bun pub:beta",
+    "pub:release": "cd packages/cli && bun pub:release",
     "test": "turbo run test --force"
   },
-  "packageManager": "pnpm@9.0.6",
+  "packageManager": "bun@1.1.34",
   "dependencies": {
     "@babel/core": "^7.22.1",
     "@changesets/changelog-github": "^0.4.8",
@@ -58,7 +58,7 @@
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "pretty-quick": "^3.1.3",
-    "tailwindcss": "3.3.7",
+    "tailwindcss": "3.4.15",
     "tailwindcss-animate": "^1.0.5",
     "tsx": "^4.1.4",
     "turbo": "^1.9.9",
