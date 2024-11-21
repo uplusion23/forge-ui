@@ -67,9 +67,6 @@ const nextConfig = {
         permanent: false,
       },
     ]
-  },
-  experimental: {
-    fallbackNodePolyfills: true,
   }
 }
 
