@@ -2,7 +2,7 @@
 // https://github.com/cloudflare/wrangler2/blob/main/.github/version-script.js
 
 import { exec } from "child_process"
-import fs from "fs"
+import fs from "node:fs"
 
 const pkgJsonPath = "packages/cli/package.json"
 try {

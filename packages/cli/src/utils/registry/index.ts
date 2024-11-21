@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import { Config } from "@/src/utils/get-config"
 import {
   registryBaseColorSchema,

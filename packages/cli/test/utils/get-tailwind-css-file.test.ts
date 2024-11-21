@@ -1,4 +1,4 @@
-import path from "path"
+import path from "node:path"
 import { describe, expect, test } from "vitest"
 
 import { getTailwindCssFile } from "../../src/utils/get-project-info"

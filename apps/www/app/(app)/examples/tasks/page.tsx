@@ -1,5 +1,5 @@
-import { promises as fs } from "fs"
-import path from "path"
+import { promises as fs } from "node:fs"
+import path from "node:path"
 import { Metadata } from "next"
 import Image from "next/image"
 import { z } from "zod"
