@@ -1,8 +1,8 @@
 // @sts-nocheck
 
-import { existsSync, promises as fs, readFileSync } from "node:fs"
-import { tmpdir } from "node:os"
-import path, { basename } from "node:path"
+import { existsSync, promises as fs, readFileSync } from "fs"
+import { tmpdir } from "os"
+import path, { basename } from "path"
 import { cwd } from "process"
 import template from "lodash.template"
 import { rimraf } from "rimraf"

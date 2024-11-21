@@ -57,7 +57,7 @@ Add the following code to the `tsconfig.json` file to resolve paths:
 Create a `gatsby-node.ts` file at the root of your project if it doesn’t already exist, and add the code below to the `gatsby-node` file so your app can resolve paths:
 
 ```ts
-import * as path from "node:path"
+import * as path from "path"
 
 export const onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({

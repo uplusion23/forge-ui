@@ -1,4 +1,4 @@
-import path from "node:path"
+import path from "path"
 import { expect, test } from "vitest"
 
 import { getConfig } from "../../src/utils/get-config"

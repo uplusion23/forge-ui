@@ -1,4 +1,4 @@
-import path from "node:path"
+import path from "path"
 import { describe, expect, test } from "vitest"
 
 import { getTsConfigAliasPrefix } from "../../src/utils/get-project-info"

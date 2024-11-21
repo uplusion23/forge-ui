@@ -1,8 +1,8 @@
 "use server"
 
-import { promises as fs } from "node:fs"
-import { tmpdir } from "node:os"
-import path from "node:path"
+import { promises as fs } from "fs"
+import { tmpdir } from "os"
+import path from "path"
 import { Index } from "@/__registry__"
 import { Project, ScriptKind, SourceFile, SyntaxKind } from "ts-morph"
 import { z } from "zod"

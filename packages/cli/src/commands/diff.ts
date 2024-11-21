@@ -1,5 +1,5 @@
-import { existsSync, promises as fs } from "node:fs"
-import path from "node:path"
+import { existsSync, promises as fs } from "fs"
+import path from "path"
 import { Config, getConfig } from "@/src/utils/get-config"
 import { handleError } from "@/src/utils/handle-error"
 import { logger } from "@/src/utils/logger"

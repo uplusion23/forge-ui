@@ -1,4 +1,4 @@
-import path from "node:path"
+import path from "path"
 import { resolveImport } from "@/src/utils/resolve-import"
 import { cosmiconfig } from "cosmiconfig"
 import { loadConfig } from "tsconfig-paths"

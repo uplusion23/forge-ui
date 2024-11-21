@@ -4,7 +4,7 @@ import {
   defineNestedType,
   makeSource,
 } from "contentlayer2/source-files"
-import path from "node:path"
+import path from "path"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
