@@ -44,7 +44,7 @@ const initOptionsSchema = z.object({
 })
 
 export const init = new Command()
-  .name(chalk.blue("init"))
+  .name("init")
   .description("initialize your project and install dependencies")
   .option("-y, --yes", "skip confirmation prompt.", false)
   .option("-d, --defaults,", "use default configuration.", false)

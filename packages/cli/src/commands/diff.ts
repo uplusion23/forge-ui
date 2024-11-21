@@ -24,7 +24,7 @@ const updateOptionsSchema = z.object({
 })
 
 export const diff = new Command()
-  .name(chalk.blue("diff"))
+  .name("diff")
   .description("check for updates against the registry")
   .argument("[component]", "the component name")
   .option("-y, --yes", "skip confirmation prompt.", false)

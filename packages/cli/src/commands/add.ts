@@ -29,7 +29,7 @@ const addOptionsSchema = z.object({
 })
 
 export const add = new Command()
-  .name(chalk.blue("add"))
+  .name("add")
   .description("add a component to your project")
   .argument("[components...]", "the components to add")
   .option("-y, --yes", "skip confirmation prompt.", true)

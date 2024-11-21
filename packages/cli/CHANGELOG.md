@@ -1,5 +1,23 @@
 # @shadcn/ui
 
+## 0.8.3
+
+### Patch Changes
+
+- update publish scripts
+
+## 0.8.2
+
+### Patch Changes
+
+- fix ansi in cli
+
+## 0.8.1
+
+### Patch Changes
+
+- style changes and meta updates
+
 ## 0.8.0
 
 ### Minor Changes
