@@ -149,3 +149,5 @@ export default async function DocPage({ params }: DocPageProps) {
     </main>
   )
 }
+
+export const runtime = "edge"

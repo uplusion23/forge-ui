@@ -25,7 +25,6 @@
     "www:build": "bun --filter=www build",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "preview": "turbo run preview",
     "typecheck": "turbo run typecheck",
     "format:write": "turbo run format:write",
     "format:check": "turbo run format:check",
@@ -34,7 +33,9 @@
     "release": "changeset version",
     "pub:beta": "cd packages/cli && bun pub:beta",
     "pub:release": "cd packages/cli && bun pub:release",
-    "test": "turbo run test --force"
+    "test": "turbo run test --force",
+    "preview": "turbo --filter=www run preview",
+    "deploy": "turbo --filter=www run deploy"
   },
   "packageManager": "bun@1.1.34",
   "dependencies": {
@@ -69,6 +70,7 @@
     "@types/node": "^20.11.27",
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.22",
+    "@cloudflare/next-on-pages": "^1.13.5",
     "typescript": "^5.5.3"
   }
 }

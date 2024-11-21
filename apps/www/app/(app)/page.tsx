@@ -63,3 +63,5 @@ export default function IndexPage() {
     </div>
   )
 }
+
+export const runtime = "edge"

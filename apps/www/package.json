@@ -12,7 +12,9 @@
     "start": "next start -p 3001",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "preview": "next build && next start -p 3001",
+    "pages:build": "bunx @cloudflare/next-on-pages",
+    "preview": "bun run pages:build && wrangler pages dev",
+    "deploy": "bun run pages:build && wrangler pages deploy",
     "typecheck": "contentlayer2 build && tsc --noEmit",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"

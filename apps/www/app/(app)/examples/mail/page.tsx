@@ -41,3 +41,5 @@ export default function MailPage() {
     </>
   )
 }
+
+export const runtime = "edge"
