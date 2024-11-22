@@ -14,13 +14,13 @@ export function Announcement({ className, ...props }: AnnouncementProps) {
     <Link
       href="/beta"
       className={cn(
-        "group inline-flex items-center rounded-full border px-4 py-0.5 text-sm font-medium",
+        "group inline-flex items-center rounded-full border px-4 py-0.5 text-xs font-medium md:text-sm",
         className
       )}
       {...props}
     >
-      <AlertTriangleIcon className="h-4 w-4" />{" "}
-      <Separator className="mx-2 h-4" orientation="vertical" />{" "}
+      <AlertTriangleIcon className="hidden h-4 w-4 md:block" />{" "}
+      <Separator className="mx-2 hidden h-4 md:block" orientation="vertical" />{" "}
       <span className="underline-offset-4 group-hover:underline">
         This product is in beta.
       </span>
