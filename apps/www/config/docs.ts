@@ -192,6 +192,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Dot Background",
+          href: "/docs/components/dot-background",
+          label: "New",
+          items: [],
+        },
+        {
           title: "Drawer",
           href: "/docs/components/drawer",
           items: [],

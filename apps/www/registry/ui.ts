@@ -106,6 +106,11 @@ export const ui: Registry = [
     files: ["ui/dialog.tsx"],
   },
   {
+    name: "dot-background",
+    type: "components:ui",
+    files: ["ui/dot-background.tsx"],
+  },
+  {
     name: "drawer",
     type: "components:ui",
     dependencies: ["vaul", "@radix-ui/react-dialog"],
@@ -168,6 +173,7 @@ export const ui: Registry = [
   {
     name: "number-ticker",
     type: "components:ui",
+    dependencies: ["framer-motion"],
     files: ["ui/number-ticker.tsx"],
   },
   {

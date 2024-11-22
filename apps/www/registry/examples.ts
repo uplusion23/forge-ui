@@ -342,6 +342,12 @@ export const examples: Registry = [
     files: ["example/dialog-demo.tsx"],
   },
   {
+    name: "dot-background-demo",
+    type: "components:example",
+    registryDependencies: ["dot-background"],
+    files: ["example/dot-background-demo.tsx"],
+  },
+  {
     name: "dialog-close-button",
     type: "components:example",
     registryDependencies: ["dialog", "button"],

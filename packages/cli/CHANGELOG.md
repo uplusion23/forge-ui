@@ -1,5 +1,11 @@
 # @shadcn/ui
 
+## 0.9.1
+
+### Patch Changes
+
+- implement dot-background component
+
 ## 0.9.0
 
 ### Minor Changes

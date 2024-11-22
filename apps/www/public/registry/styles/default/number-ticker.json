@@ -1,5 +1,8 @@
 {
   "name": "number-ticker",
+  "dependencies": [
+    "framer-motion"
+  ],
   "files": [
     {
       "name": "number-ticker.tsx",

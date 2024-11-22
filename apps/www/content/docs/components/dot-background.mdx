@@ -1,0 +1,67 @@
+---
+title: Dot Background
+description: A simple dotted background component
+component: true
+---
+
+<ComponentPreview
+  name="dot-background-demo"
+  description="A simple background with dots"
+/>
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+bunx --bun @uplusion23/forge-ui add dot-background
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="dot-background" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { DotBackground } from "@/components/ui/dot-background"
+```
+
+```tsx
+<DotBackground />
+```
+
+### Props
+
+```ts
+interface DotBackgroundProps extends React.SVGProps<SVGSVGElement> {
+  width?: string | number
+  height?: string | number
+  x?: string | number
+  y?: string | number
+  cx?: string | number
+  cy?: string | number
+  cr?: string | number
+  className?: string
+}
+```

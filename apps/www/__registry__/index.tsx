@@ -192,6 +192,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "dot-background": {
+      name: "dot-background",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/dot-background")),
+      source: "",
+      files: ["registry/default/ui/dot-background.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "drawer": {
       name: "drawer",
       type: "components:ui",
@@ -1134,6 +1145,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/dialog-demo")),
       source: "",
       files: ["registry/default/example/dialog-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "dot-background-demo": {
+      name: "dot-background-demo",
+      type: "components:example",
+      registryDependencies: ["dot-background"],
+      component: React.lazy(() => import("@/registry/default/example/dot-background-demo")),
+      source: "",
+      files: ["registry/default/example/dot-background-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -3537,6 +3559,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "dot-background": {
+      name: "dot-background",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/austin/ui/dot-background")),
+      source: "",
+      files: ["registry/austin/ui/dot-background.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "drawer": {
       name: "drawer",
       type: "components:ui",
@@ -4479,6 +4512,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/austin/example/dialog-demo")),
       source: "",
       files: ["registry/austin/example/dialog-demo.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "dot-background-demo": {
+      name: "dot-background-demo",
+      type: "components:example",
+      registryDependencies: ["dot-background"],
+      component: React.lazy(() => import("@/registry/austin/example/dot-background-demo")),
+      source: "",
+      files: ["registry/austin/example/dot-background-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

@@ -178,6 +178,13 @@
     "type": "components:ui"
   },
   {
+    "name": "dot-background",
+    "files": [
+      "ui/dot-background.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "drawer",
     "dependencies": [
       "vaul",
@@ -275,6 +282,9 @@
   },
   {
     "name": "number-ticker",
+    "dependencies": [
+      "framer-motion"
+    ],
     "files": [
       "ui/number-ticker.tsx"
     ],

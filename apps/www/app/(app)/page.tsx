@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
+import { ArrowRightCircleIcon } from "lucide-react"
 
-import { siteConfig } from "@/config/site"
+import { AnimatedLogo } from "@/components/animated-logo"
 import { Announcement } from "@/components/announcement"
 import { ExamplesNav } from "@/components/examples-nav"
 import {
@@ -11,34 +12,37 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { Button } from "@/registry/austin/ui/button"
+import { DotBackground } from "@/registry/default/ui/dot-background"
 import MailPage from "@/app/(app)/examples/mail/page"
 
 export default function IndexPage() {
   return (
-    <div className="container relative">
-      <PageHeader>
-        <Announcement />
-        <PageHeaderHeading>Build your component library</PageHeaderHeading>
+    <div className="container relative pb-20">
+      <PageHeader className="relative z-0">
+        <DotBackground className="z-[-1] h-full w-full [mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]" />
+        <Announcement className="mb-4 font-mono" />
+        <AnimatedLogo />
+        <PageHeaderHeading>
+          Build apps without fighting libraries
+        </PageHeaderHeading>
         <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your
-          apps.
+          Beautifully designed components that you can import into your apps,
+          with a focus on accessibility and developer experience.
         </PageHeaderDescription>
         <PageActions>
-          <Button asChild size="sm">
-            <Link href="/docs">Get Started</Link>
-          </Button>
-          <Button asChild size="sm" variant="ghost">
-            <Link
-              target="_blank"
-              rel="noreferrer"
-              href={siteConfig.links.github}
-            >
-              GitHub
+          <Button
+            asChild
+            size="sm"
+            className="flex items-center gap-2 rounded-full shadow-sm shadow-primary/0 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+          >
+            <Link href="/docs">
+              Get Started
+              <ArrowRightCircleIcon className="h-6 w-6" />
             </Link>
           </Button>
         </PageActions>
       </PageHeader>
-      <ExamplesNav className="[&>a:first-child]:text-primary" />
+      <ExamplesNav />
       <section className="overflow-hidden rounded-lg border bg-background shadow-md md:hidden md:shadow-xl">
         <Image
           src="/examples/mail-dark.png"
