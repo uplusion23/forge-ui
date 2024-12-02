@@ -6,5 +6,9 @@
   {
     "name": "austin",
     "label": "Austin"
+  },
+  {
+    "name": "dc",
+    "label": "D.C."
   }
 ]

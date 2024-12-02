@@ -28,7 +28,13 @@ import {
 export function CommandMenu({ ...props }: DialogProps) {
   const router = useRouter()
   const [open, setOpen] = React.useState(false)
+  const [platform, setPlatform] = React.useState("")
   const { setTheme } = useTheme()
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return
+    setPlatform(window.navigator.platform)
+  }, [])
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -55,9 +61,6 @@ export function CommandMenu({ ...props }: DialogProps) {
     setOpen(false)
     command()
   }, [])
-
-  const platform =
-    typeof window !== "undefined" ? window.navigator.platform : ""
 
   return (
     <>

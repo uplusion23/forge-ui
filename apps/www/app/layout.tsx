@@ -10,6 +10,8 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeSwitcher } from "@/components/theme-switcher"
 import { Toaster as AustinSonner } from "@/registry/austin/ui/sonner"
 import { Toaster as AustinToaster } from "@/registry/austin/ui/toaster"
+import { Toaster as DcSonner } from "@/registry/dc/ui/sonner"
+import { Toaster as DcToaster } from "@/registry/dc/ui/toaster"
 import { Toaster as DefaultToaster } from "@/registry/default/ui/toaster"
 
 export const metadata: Metadata = {
@@ -101,8 +103,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <ThemeSwitcher />
             <Analytics />
             <AustinToaster />
+            <DcToaster />
             <DefaultToaster />
             <AustinSonner />
+            <DcSonner />
           </ThemeProvider>
         </body>
       </html>

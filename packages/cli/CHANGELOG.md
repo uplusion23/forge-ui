@@ -1,5 +1,11 @@
 # @shadcn/ui
 
+## 0.10.0
+
+### Minor Changes
+
+- implement DC styling with phosphor icons
+
 ## 0.9.1
 
 ### Patch Changes

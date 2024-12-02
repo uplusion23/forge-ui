@@ -225,6 +225,11 @@ function Customizer() {
                   with smaller buttons and cards with shadows. It uses icons
                   from Radix Icons.
                 </p>
+                <p>
+                  The <span className="font-medium">D.C.</span> style ships with
+                  smaller buttons and cards with shadows. It uses icons from
+                  Radix Icons.
+                </p>
               </PopoverContent>
             </Popover>
           </div>
