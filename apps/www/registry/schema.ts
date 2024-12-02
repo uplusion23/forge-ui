@@ -41,7 +41,7 @@ export type Registry = z.infer<typeof registrySchema>
 
 export const blockSchema = registryEntrySchema.extend({
   type: z.literal("components:block"),
-  style: z.enum(["default", "austin"]),
+  style: z.enum(["default", "austin", "dc"]),
   component: z.any(),
   container: z
     .object({
