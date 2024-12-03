@@ -20,7 +20,7 @@ export default function IndexPage() {
     <div className="container relative pb-20">
       <PageHeader className="relative z-0">
         <DotBackground className="z-[-1] h-full w-full [mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]" />
-        <Announcement className="mb-4 font-mono" />
+        <Announcement className="mb-4" />
         <AnimatedLogo />
         <PageHeaderHeading>
           Build apps without fighting libraries

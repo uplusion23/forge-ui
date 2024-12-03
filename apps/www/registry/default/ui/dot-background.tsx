@@ -43,7 +43,7 @@ function DotBackground({
     <svg
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 size-full fill-muted/80",
+        "pointer-events-none absolute inset-0 size-full fill-foreground/20 dark:fill-muted/80",
         className
       )}
       {...props}

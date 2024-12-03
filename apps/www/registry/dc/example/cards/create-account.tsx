@@ -1,6 +1,7 @@
 "use client"
 
-import { Icons } from "@/components/icons"
+import { GithubLogo, GoogleLogo } from "@phosphor-icons/react"
+
 import { Button } from "@/registry/dc/ui/button"
 import {
   Card,
@@ -25,11 +26,11 @@ export function CardsCreateAccount() {
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
           <Button variant="outline">
-            <Icons.gitHub className="mr-2 h-4 w-4" />
+            <GithubLogo className="mr-2 h-4 w-4" />
             GitHub
           </Button>
           <Button variant="outline">
-            <Icons.google className="mr-2 h-4 w-4" />
+            <GoogleLogo className="mr-2 h-4 w-4" />
             Google
           </Button>
         </div>

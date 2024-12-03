@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDownIcon } from "@radix-ui/react-icons"
+import { CaretDown } from "@phosphor-icons/react"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/dc/ui/avatar"
 import { Button } from "@/registry/dc/ui/button"
@@ -50,7 +50,7 @@ export function CardsTeamMembers() {
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
                 Owner{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
+                <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -104,7 +104,7 @@ export function CardsTeamMembers() {
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
                 Member{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
+                <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -160,7 +160,7 @@ export function CardsTeamMembers() {
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
                 Member{" "}
-                <ChevronDownIcon className="ml-2 h-4 w-4 text-muted-foreground" />
+                <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">

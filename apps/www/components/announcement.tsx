@@ -14,7 +14,7 @@ export function Announcement({ className, ...props }: AnnouncementProps) {
     <Link
       href="/beta"
       className={cn(
-        "group inline-flex items-center rounded-full border px-4 py-0.5 text-xs font-medium md:text-sm",
+        "group inline-flex items-center rounded-full border py-0.5 pl-2 pr-4 text-xs font-medium md:text-sm",
         className
       )}
       {...props}
@@ -24,7 +24,7 @@ export function Announcement({ className, ...props }: AnnouncementProps) {
       <span className="underline-offset-4 group-hover:underline">
         This product is in beta.
       </span>
-      <span className="ml-2 flex items-center gap-2 text-secondary-foreground dark:text-primary">
+      <span className="ml-2 flex items-center gap-2 text-primary underline-offset-4 group-hover:underline">
         Learn more
         <ArrowRightIcon className="h-4 w-4" />
       </span>

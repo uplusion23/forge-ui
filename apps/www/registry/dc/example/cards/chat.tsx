@@ -1,5 +1,5 @@
 import * as React from "react"
-import { CheckIcon, PaperPlaneIcon, PlusIcon } from "@radix-ui/react-icons"
+import { Check, PaperPlaneRight, Plus } from "@phosphor-icons/react"
 
 import { cn } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@/registry/dc/ui/avatar"
@@ -112,7 +112,7 @@ export function CardsChat() {
                   className="ml-auto rounded-full"
                   onClick={() => setOpen(true)}
                 >
-                  <PlusIcon className="h-4 w-4" />
+                  <Plus className="h-4 w-4" />
                   <span className="sr-only">New message</span>
                 </Button>
               </TooltipTrigger>
@@ -162,7 +162,7 @@ export function CardsChat() {
               onChange={(event) => setInput(event.target.value)}
             />
             <Button type="submit" size="icon" disabled={inputLength === 0}>
-              <PaperPlaneIcon className="h-4 w-4" />
+              <PaperPlaneRight className="h-4 w-4" />
               <span className="sr-only">Send</span>
             </Button>
           </form>
@@ -215,7 +215,7 @@ export function CardsChat() {
                       </p>
                     </div>
                     {selectedUsers.includes(user) ? (
-                      <CheckIcon className="ml-auto flex h-5 w-5 text-primary" />
+                      <Check className="ml-auto flex h-5 w-5 text-primary" />
                     ) : null}
                   </CommandItem>
                 ))}

@@ -226,9 +226,9 @@ function Customizer() {
                   from Radix Icons.
                 </p>
                 <p>
-                  The <span className="font-medium">D.C.</span> style ships with
-                  smaller buttons and cards with shadows. It uses icons from
-                  Radix Icons.
+                  The <span className="font-medium">D.C.</span> style comes with
+                  smaller buttons and cards with shadows, and some backdrop
+                  blurs. It uses icons from Phosphor Icons.
                 </p>
               </PopoverContent>
             </Popover>
@@ -253,6 +253,14 @@ function Customizer() {
               )}
             >
               Austin
+            </Button>
+            <Button
+              variant={"outline"}
+              size="sm"
+              onClick={() => setConfig({ ...config, style: "dc" })}
+              className={cn(config.style === "dc" && "border-2 border-primary")}
+            >
+              D.C.
             </Button>
           </div>
         </div>
