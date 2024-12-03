@@ -383,11 +383,21 @@ export async function runInit(cwd: string, config: Config) {
   const dependenciesSpinner = ora(`Installing dependencies...`)?.start()
   const packageManager = await getPackageManager(cwd)
 
+  const getIconLibrary = () => {
+    switch (config.style) {
+      case "austin":
+        return "@radix-ui/react-icons"
+      case "dc":
+        return "@phosphor-icons/react"
+      case "default":
+        return "lucide-react"
+      default:
+        return "lucide-react"
+    }
+  }
+
   // TODO: add support for other icon libraries.
-  const deps = [
-    ...PROJECT_DEPENDENCIES,
-    config.style === "austin" ? "@radix-ui/react-icons" : "lucide-react",
-  ]
+  const deps = [...PROJECT_DEPENDENCIES, getIconLibrary()]
 
   await execa(
     packageManager,
