@@ -50,12 +50,12 @@
   @apply relative;
 }
 
-[data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply rounded-md bg-zinc-700/50 border-zinc-700/70 p-1;
+[data-line] mark {
+  @apply rounded-md bg-zinc-700/50 border-primary/50 p-1 border;
 }
 
-.dark [data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply bg-zinc-900;
+.dark [data-line] mark {
+  @apply bg-zinc-900 border-primary/50;
 }
 
 [data-rehype-pretty-code-title] {

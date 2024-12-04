@@ -17,6 +17,7 @@ import { ComponentPreview } from "@/components/component-preview"
 import { ComponentSource } from "@/components/component-source"
 import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
 import { FrameworkDocs } from "@/components/framework-docs"
+import { GuideDo, GuideDont } from "@/components/guide"
 import { StyleWrapper } from "@/components/style-wrapper"
 import {
   Accordion,
@@ -104,7 +105,10 @@ const components = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn(
+        "leading-7 [&:not(:first-child)]:mt-6 [&_[data-rehype-pretty-code-fragment]]:inline-block [&_[data-rehype-pretty-code-fragment]]:bg-zinc-900 [&_[data-rehype-pretty-code-fragment]]:text-foreground",
+        className
+      )}
       {...props}
     />
   ),
@@ -186,7 +190,7 @@ const components = {
       <StyleWrapper styleName={__style__}>
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-950 py-4 dark:bg-zinc-900",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-800 p-4 dark:bg-zinc-950",
             className
           )}
           {...props}
@@ -219,7 +223,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded bg-zinc-800 px-[0.3rem] py-[0.2rem] font-mono text-sm text-zinc-50 dark:bg-zinc-950",
         className
       )}
       {...props}
@@ -230,6 +234,8 @@ const components = {
   ComponentPreview,
   ComponentExample,
   ComponentSource,
+  GuideDo,
+  GuideDont,
   AspectRatio,
   CodeBlockWrapper: ({ ...props }) => (
     <CodeBlockWrapper className="rounded-md border" {...props} />

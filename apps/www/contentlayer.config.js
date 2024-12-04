@@ -1,10 +1,8 @@
-import { getHighlighter, loadTheme } from "@shikijs/compat"
 import {
   defineDocumentType,
   defineNestedType,
   makeSource,
 } from "contentlayer2/source-files"
-import path from "path"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
@@ -85,8 +83,6 @@ export default makeSource({
   mdx: {
     remarkPlugins: [remarkGfm, codeImport],
     rehypePlugins: [
-      rehypeSlug,
-      rehypeComponent,
       () => (tree) => {
         visit(tree, (node) => {
           if (node?.type === "element" && node?.tagName === "pre") {
@@ -111,30 +107,8 @@ export default makeSource({
           }
         })
       },
-      [
-        rehypePrettyCode,
-        {
-          getHighlighter: async () => {
-            const theme = await loadTheme(
-              path.join(process.cwd(), "/lib/highlighter-theme.json")
-            )
-            return await getHighlighter({ theme })
-          },
-          onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: "text", value: " " }]
-            }
-          },
-          onVisitHighlightedLine(node) {
-            node.properties.className.push("line--highlighted")
-          },
-          onVisitHighlightedWord(node) {
-            node.properties.className = ["word--highlighted"]
-          },
-        },
-      ],
+      rehypeSlug,
+      rehypeComponent,
       () => (tree) => {
         visit(tree, (node) => {
           if (node?.type === "element" && node?.tagName === "div") {
@@ -172,6 +146,34 @@ export default makeSource({
           properties: {
             className: ["subheading-anchor"],
             ariaLabel: "Link to section",
+          },
+        },
+      ],
+
+      [
+        rehypePrettyCode,
+        {
+          theme: 'github-dark-high-contrast',
+          keepBackground: false,
+          // getHighlighter: async () => {
+          //   const theme = await loadTheme(
+          //     path.join(process.cwd(), "/lib/highlighter-theme.json")
+          //   )
+          //   return await getHighlighter({ theme })
+          // },
+          // onVisitLine(node) {
+          //   // Prevent lines from collapsing in `display: grid` mode, and allow empty
+          //   // lines to be copy/pasted
+          //   if (node.children.length === 0) {
+          //     node.children = [{ type: "text", value: " " }]
+          //   }
+          // },
+          // onVisitHighlightedLine(node) {
+          //   node.properties.className.push("line--highlighted")
+          // },
+          onVisitHighlightedWord(node) {
+            console.log(node.properties.className)
+            node.properties.className = ["word--highlighted"]
           },
         },
       ],
