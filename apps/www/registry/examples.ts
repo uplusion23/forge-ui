@@ -1,6 +1,28 @@
 import { Registry } from "@/registry/schema"
 
+const guideExamples: Registry = [
+  {
+    name: "guide-dialog-bad",
+    type: "components:example",
+    registryDependencies: ["card"],
+    files: ["example/guide-dialog-bad.tsx"],
+  },
+  {
+    name: "guide-dialog-good",
+    type: "components:example",
+    registryDependencies: ["card"],
+    files: ["example/guide-dialog-good.tsx"],
+  },
+  {
+    name: "guide-screen-space-bad",
+    type: "components:example",
+    registryDependencies: ["card", "switch", "button"],
+    files: ["example/guide-screen-space-bad.tsx"],
+  },
+]
+
 export const examples: Registry = [
+  ...guideExamples,
   {
     name: "accordion-demo",
     type: "components:example",

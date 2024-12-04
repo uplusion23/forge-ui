@@ -1,0 +1,26 @@
+import { Button } from "@/registry/default/ui/button"
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/registry/default/ui/card"
+
+export default function GuideDialogGood() {
+  return (
+    <Card className="w-[350px]">
+      <CardHeader>
+        <CardTitle>Are you absolutely sure?</CardTitle>
+        <CardDescription>
+          This action cannot be undone. This will permanently delete your
+          account and remove your data from our servers.
+        </CardDescription>
+      </CardHeader>
+      <CardFooter className="flex justify-end gap-2">
+        <Button variant="ghost">Cancel</Button>
+        <Button variant="destructive">Delete</Button>
+      </CardFooter>
+    </Card>
+  )
+}

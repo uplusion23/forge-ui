@@ -52,6 +52,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Guide",
+          href: "/docs/guide",
+          items: [],
+        },
+        {
           title: "components.json",
           href: "/docs/components-json",
           items: [],

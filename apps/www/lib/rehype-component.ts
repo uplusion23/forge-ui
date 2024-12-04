@@ -1,15 +1,15 @@
 import fs from "fs"
 import path from "path"
-import { UnistNode, UnistTree } from "types/unist"
+import { UnistNode } from "types/unist"
 import { u } from "unist-builder"
-import { visit } from "unist-util-visit"
+import { Test, visit } from "unist-util-visit"
 
 import { Index } from "../__registry__"
 import { styles } from "../registry/styles"
 
 export function rehypeComponent() {
-  return async (tree: UnistTree) => {
-    visit(tree, (node: UnistNode) => {
+  return async (tree: import("unist").Node) => {
+    visit<import("unist").Node, Test>(tree, (node: UnistNode) => {
       // src prop overrides both name and fileName.
       const { value: srcPath } =
         (getNodeAttributeByName(node, "src") as {

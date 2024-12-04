@@ -533,6 +533,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "guide-dialog-bad": {
+      name: "guide-dialog-bad",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/default/example/guide-dialog-bad")),
+      source: "",
+      files: ["registry/default/example/guide-dialog-bad.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-dialog-good": {
+      name: "guide-dialog-good",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/default/example/guide-dialog-good")),
+      source: "",
+      files: ["registry/default/example/guide-dialog-good.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-screen-space-bad": {
+      name: "guide-screen-space-bad",
+      type: "components:example",
+      registryDependencies: ["card","switch","button"],
+      component: React.lazy(() => import("@/registry/default/example/guide-screen-space-bad")),
+      source: "",
+      files: ["registry/default/example/guide-screen-space-bad.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -3900,6 +3933,39 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "guide-dialog-bad": {
+      name: "guide-dialog-bad",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/austin/example/guide-dialog-bad")),
+      source: "",
+      files: ["registry/austin/example/guide-dialog-bad.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-dialog-good": {
+      name: "guide-dialog-good",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/austin/example/guide-dialog-good")),
+      source: "",
+      files: ["registry/austin/example/guide-dialog-good.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-screen-space-bad": {
+      name: "guide-screen-space-bad",
+      type: "components:example",
+      registryDependencies: ["card","switch","button"],
+      component: React.lazy(() => import("@/registry/austin/example/guide-screen-space-bad")),
+      source: "",
+      files: ["registry/austin/example/guide-screen-space-bad.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -7263,6 +7329,39 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/dc/ui/tooltip")),
       source: "",
       files: ["registry/dc/ui/tooltip.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-dialog-bad": {
+      name: "guide-dialog-bad",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/dc/example/guide-dialog-bad")),
+      source: "",
+      files: ["registry/dc/example/guide-dialog-bad.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-dialog-good": {
+      name: "guide-dialog-good",
+      type: "components:example",
+      registryDependencies: ["card"],
+      component: React.lazy(() => import("@/registry/dc/example/guide-dialog-good")),
+      source: "",
+      files: ["registry/dc/example/guide-dialog-good.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-screen-space-bad": {
+      name: "guide-screen-space-bad",
+      type: "components:example",
+      registryDependencies: ["card","switch","button"],
+      component: React.lazy(() => import("@/registry/dc/example/guide-screen-space-bad")),
+      source: "",
+      files: ["registry/dc/example/guide-screen-space-bad.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

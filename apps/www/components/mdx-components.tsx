@@ -17,7 +17,7 @@ import { ComponentPreview } from "@/components/component-preview"
 import { ComponentSource } from "@/components/component-source"
 import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
 import { FrameworkDocs } from "@/components/framework-docs"
-import { GuideDo, GuideDont } from "@/components/guide"
+import { GuideDo, GuideDont, GuideOkay } from "@/components/guide"
 import { StyleWrapper } from "@/components/style-wrapper"
 import {
   Accordion,
@@ -190,7 +190,7 @@ const components = {
       <StyleWrapper styleName={__style__}>
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-800 p-4 dark:bg-zinc-950",
+            "mb-4 max-h-[650px] overflow-x-auto rounded-lg border bg-zinc-800 p-4 dark:bg-zinc-950",
             className
           )}
           {...props}
@@ -231,11 +231,12 @@ const components = {
   ),
   Image,
   Callout,
-  ComponentPreview,
   ComponentExample,
   ComponentSource,
+  ComponentPreview,
   GuideDo,
   GuideDont,
+  GuideOkay,
   AspectRatio,
   CodeBlockWrapper: ({ ...props }) => (
     <CodeBlockWrapper className="rounded-md border" {...props} />

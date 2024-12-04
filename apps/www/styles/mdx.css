@@ -14,6 +14,10 @@
   display: block;
 }
 
+[data-rehype-pretty-code-figure] {
+  @apply mt-2;
+}
+
 [data-rehype-pretty-code-fragment] {
   @apply relative text-white;
 }
@@ -59,11 +63,19 @@
 }
 
 [data-rehype-pretty-code-title] {
-  @apply mt-2 pt-6 px-4 text-sm font-medium text-foreground;
+  @apply relative mt-2 py-2 px-4 text-sm font-medium text-zinc-300 font-mono max-w-max rounded-t-lg border border-b-0 z-10 bg-zinc-800 dark:bg-zinc-900;
 }
 
 [data-rehype-pretty-code-title] + pre {
-  @apply mt-2;
+  @apply -mt-px z-0 rounded-tl-none;
+}
+
+[data-rehype-pretty-code-caption] {
+  @apply relative mb-2 -mt-px py-2 px-4 text-xs font-medium text-zinc-400 max-w-max rounded-b-lg border border-t-0 z-10 bg-zinc-800 dark:bg-zinc-900;
+}
+
+pre:has(+ [data-rehype-pretty-code-caption]) {
+  @apply mb-0 z-0 rounded-bl-none;
 }
 
 .mdx > .steps:first-child > h3:first-child {
