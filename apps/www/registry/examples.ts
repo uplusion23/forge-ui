@@ -19,6 +19,12 @@ const guideExamples: Registry = [
     registryDependencies: ["card", "switch", "button"],
     files: ["example/guide-screen-space-bad.tsx"],
   },
+  {
+    name: "guide-screen-space-good",
+    type: "components:example",
+    registryDependencies: ["card", "switch", "button"],
+    files: ["example/guide-screen-space-good.tsx"],
+  },
 ]
 
 export const examples: Registry = [

@@ -566,6 +566,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "guide-screen-space-good": {
+      name: "guide-screen-space-good",
+      type: "components:example",
+      registryDependencies: ["card","switch","button"],
+      component: React.lazy(() => import("@/registry/default/example/guide-screen-space-good")),
+      source: "",
+      files: ["registry/default/example/guide-screen-space-good.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -3966,6 +3977,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "guide-screen-space-good": {
+      name: "guide-screen-space-good",
+      type: "components:example",
+      registryDependencies: ["card","switch","button"],
+      component: React.lazy(() => import("@/registry/austin/example/guide-screen-space-good")),
+      source: "",
+      files: ["registry/austin/example/guide-screen-space-good.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "accordion-demo": {
       name: "accordion-demo",
       type: "components:example",
@@ -7362,6 +7384,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/dc/example/guide-screen-space-bad")),
       source: "",
       files: ["registry/dc/example/guide-screen-space-bad.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "guide-screen-space-good": {
+      name: "guide-screen-space-good",
+      type: "components:example",
+      registryDependencies: ["card","switch","button"],
+      component: React.lazy(() => import("@/registry/dc/example/guide-screen-space-good")),
+      source: "",
+      files: ["registry/dc/example/guide-screen-space-good.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
