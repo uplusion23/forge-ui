@@ -1,4 +1,3 @@
-import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 import { createContentlayerPlugin } from "next-contentlayer2";
 
 /** @type {import('next').NextConfig} */
@@ -70,10 +69,6 @@ const nextConfig = {
       },
     ]
   }
-}
-
-if (process.env.NODE_ENV === 'development') {
-  await setupDevPlatform();
 }
 
 const withContentlayer = createContentlayerPlugin({
