@@ -19,7 +19,7 @@ import {
   getRegistryBaseColors,
   getRegistryStyles,
 } from "@/src/utils/registry"
-import * as templates from "@/src/utils/templates"
+import * as templates from "@/src/utils/templates/templates"
 import chalk from "chalk"
 import { Command } from "commander"
 import { execa } from "execa"
