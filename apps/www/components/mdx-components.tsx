@@ -1,39 +1,39 @@
 // @ts-nocheck
 "use client"
 
-import * as React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { useMDXComponent } from "next-contentlayer2/hooks"
-import { NpmCommands } from "types/unist"
+import { useMDXComponent } from "@content-collections/mdx/react";
+import Image from "next/image";
+import Link from "next/link";
+import * as React from "react";
+import { NpmCommands } from "types/unist";
 
-import { Event } from "@/lib/events"
-import { cn } from "@/lib/utils"
-import { useConfig } from "@/hooks/use-config"
-import { Callout } from "@/components/callout"
-import { CodeBlockWrapper } from "@/components/code-block-wrapper"
-import { ComponentExample } from "@/components/component-example"
-import { ComponentPreview } from "@/components/component-preview"
-import { ComponentSource } from "@/components/component-source"
-import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
-import { FrameworkDocs } from "@/components/framework-docs"
-import { GuideDo, GuideDont, GuideOkay } from "@/components/guide"
-import { StyleWrapper } from "@/components/style-wrapper"
+import { Callout } from "@/components/callout";
+import { CodeBlockWrapper } from "@/components/code-block-wrapper";
+import { ComponentExample } from "@/components/component-example";
+import { ComponentPreview } from "@/components/component-preview";
+import { ComponentSource } from "@/components/component-source";
+import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button";
+import { FrameworkDocs } from "@/components/framework-docs";
+import { GuideDo, GuideDont, GuideOkay } from "@/components/guide";
+import { StyleWrapper } from "@/components/style-wrapper";
+import { useConfig } from "@/hooks/use-config";
+import { Event } from "@/lib/events";
+import { cn } from "@/lib/utils";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/austin/ui/accordion"
-import { Alert, AlertDescription, AlertTitle } from "@/registry/austin/ui/alert"
-import { AspectRatio } from "@/registry/austin/ui/aspect-ratio"
+} from "@/registry/austin/ui/accordion";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/austin/ui/alert";
+import { AspectRatio } from "@/registry/austin/ui/aspect-ratio";
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@/registry/austin/ui/tabs"
-import { Style } from "@/registry/styles"
+} from "@/registry/austin/ui/tabs";
+import { Style } from "@/registry/styles";
 
 const components = {
   Accordion,

@@ -12,7 +12,7 @@ import { rehypeNpmCommand } from "./lib/rehype-npm-command"
 
 const docs = defineCollection({
   name: "docs",
-  directory: "content/docs",
+  directory: "content",
   include: "**/*.mdx",
   schema: (z) => ({
     title: z.string(),
