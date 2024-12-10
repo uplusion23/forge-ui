@@ -1,19 +1,19 @@
+import { allDocs } from "content-collections"
 import { notFound } from "next/navigation"
-import { allDocs } from "contentlayer/generated"
 
 import "@/styles/mdx.css"
+import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
 import Balancer from "react-wrap-balancer"
 
-import { siteConfig } from "@/config/site"
-import { getTableOfContents } from "@/lib/toc"
-import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
 import { TracingBeam } from "@/components/tracing-beam"
+import { siteConfig } from "@/config/site"
+import { getTableOfContents } from "@/lib/toc"
+import { absoluteUrl, cn } from "@/lib/utils"
 import { badgeVariants } from "@/registry/austin/ui/badge"
 import { ScrollArea } from "@/registry/austin/ui/scroll-area"
 
@@ -85,7 +85,7 @@ export default async function DocPage({ params }: DocPageProps) {
     notFound()
   }
 
-  const toc = await getTableOfContents(doc.body.raw)
+  const toc = await getTableOfContents(doc.content)
 
   return (
     <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
@@ -137,7 +137,7 @@ export default async function DocPage({ params }: DocPageProps) {
           </div>
         ) : null}
         <div className="pb-12 pt-8">
-          <Mdx code={doc.body.code} />
+          <Mdx code={doc.mdx} />
         </div>
         <DocsPager doc={doc} />
       </TracingBeam>
