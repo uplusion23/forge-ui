@@ -19,14 +19,14 @@ export function Announcement({ className, ...props }: AnnouncementProps) {
       )}
       {...props}
     >
-      <AlertTriangleIcon className="hidden h-4 w-4 md:block" />{" "}
+      <AlertTriangleIcon className="hidden size-4 md:block" />{" "}
       <Separator className="mx-2 hidden h-4 md:block" orientation="vertical" />{" "}
       <span className="underline-offset-4 group-hover:underline">
         This product is in beta.
       </span>
       <span className="ml-2 flex items-center gap-2 text-primary underline-offset-4 group-hover:underline">
         Learn more
-        <ArrowRightIcon className="h-4 w-4" />
+        <ArrowRightIcon className="size-4" />
       </span>
     </Link>
   )

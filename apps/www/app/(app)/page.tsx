@@ -19,7 +19,7 @@ export default function IndexPage() {
   return (
     <div className="container relative pb-20">
       <PageHeader className="relative z-0">
-        <DotBackground className="z-[-1] h-full w-full [mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]" />
+        <DotBackground className="z-[-1] size-full [mask-image:radial-gradient(40vw_circle_at_center,white,transparent)]" />
         <Announcement className="mb-4" />
         <AnimatedLogo />
         <PageHeaderHeading>
@@ -37,7 +37,7 @@ export default function IndexPage() {
           >
             <Link href="/docs">
               Get Started
-              <ArrowRightCircleIcon className="h-6 w-6" />
+              <ArrowRightCircleIcon className="size-6" />
             </Link>
           </Button>
         </PageActions>

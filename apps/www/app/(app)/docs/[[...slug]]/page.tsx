@@ -97,7 +97,7 @@ export default async function DocPage({ params }: DocPageProps) {
       >
         <div className="mb-4 flex items-center space-x-1 text-sm leading-none text-muted-foreground">
           <div className="truncate">Docs</div>
-          <ChevronRightIcon className="h-3.5 w-3.5" />
+          <ChevronRightIcon className="size-3.5" />
           <div className="text-foreground">{doc.title}</div>
         </div>
         <div className="space-y-2">
@@ -120,7 +120,7 @@ export default async function DocPage({ params }: DocPageProps) {
                 className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
               >
                 Docs
-                <ExternalLinkIcon className="h-3 w-3" />
+                <ExternalLinkIcon className="size-3" />
               </Link>
             )}
             {doc.links?.api && (
@@ -131,7 +131,7 @@ export default async function DocPage({ params }: DocPageProps) {
                 className={cn(badgeVariants({ variant: "secondary" }), "gap-1")}
               >
                 API Reference
-                <ExternalLinkIcon className="h-3 w-3" />
+                <ExternalLinkIcon className="size-3" />
               </Link>
             )}
           </div>

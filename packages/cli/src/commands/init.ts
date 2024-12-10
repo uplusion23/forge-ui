@@ -30,12 +30,7 @@ import { z } from "zod"
 
 import { applyPrefixesCss } from "../utils/transformers/transform-tw-prefix"
 
-const PROJECT_DEPENDENCIES = [
-  "tailwindcss-animate",
-  "class-variance-authority",
-  "clsx",
-  "tailwind-merge",
-]
+const PROJECT_DEPENDENCIES = ["tailwindcss-animate", "clsx", "tailwind-merge"]
 
 const initOptionsSchema = z.object({
   cwd: z.string(),

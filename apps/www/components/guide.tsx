@@ -9,7 +9,7 @@ function Guide({ children }: { children: React.ReactNode[] }) {
 export function GuideDo() {
   return (
     <Guide>
-      <Check className="h-8 w-8 rounded-full border bg-green-600/70 p-2 text-zinc-50 dark:bg-green-500/40" />
+      <Check className="size-8 rounded-full border bg-green-600/70 p-2 text-zinc-50 dark:bg-green-500/40" />
       <span className="font-mono text-sm uppercase text-muted-foreground">
         Do
       </span>
@@ -20,7 +20,7 @@ export function GuideDo() {
 export function GuideDont() {
   return (
     <Guide>
-      <X className="h-8 w-8 rounded-full border bg-destructive/70 p-2 text-destructive-foreground" />
+      <X className="size-8 rounded-full border bg-destructive/70 p-2 text-destructive-foreground" />
       <span className="font-mono text-sm uppercase text-muted-foreground">
         Don&apos;t
       </span>
@@ -31,7 +31,7 @@ export function GuideDont() {
 export function GuideOkay() {
   return (
     <Guide>
-      <Check className="h-8 w-8 rounded-full border bg-orange-400/70 p-2 text-zinc-50 dark:bg-yellow-400/70" />
+      <Check className="size-8 rounded-full border bg-orange-400/70 p-2 text-zinc-50 dark:bg-yellow-400/70" />
       <span className="font-mono text-sm uppercase text-muted-foreground">
         Okay
       </span>

@@ -71,7 +71,6 @@ test("init config-full", async () => {
     [
       "add",
       "tailwindcss-animate",
-      "class-variance-authority",
       "clsx",
       "tailwind-merge",
       "@radix-ui/react-icons",
@@ -141,7 +140,6 @@ test("init config-partial", async () => {
     [
       "install",
       "tailwindcss-animate",
-      "class-variance-authority",
       "clsx",
       "tailwind-merge",
       "lucide-react",

@@ -95,7 +95,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             disableTransitionOnChange
           >
             <div vaul-drawer-wrapper="">
-              <div className="relative mx-auto flex min-h-screen flex-col bg-background min-[1800px]:max-w-[1536px] min-[1800px]:border-x">
+              <div className="relative mx-auto flex min-h-screen flex-col bg-background min-[1800px]:max-w-screen-2xl min-[1800px]:border-x">
                 {children}
               </div>
             </div>
