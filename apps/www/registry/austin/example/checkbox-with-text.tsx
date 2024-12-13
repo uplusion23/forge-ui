@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Checkbox } from "@/registry/austin/ui/checkbox"
+import { Checkbox } from "@/registry/austin/ui/checkbox";
 
 export default function CheckboxWithText() {
   return (
@@ -18,5 +18,5 @@ export default function CheckboxWithText() {
         </p>
       </div>
     </div>
-  )
+  );
 }

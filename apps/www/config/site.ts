@@ -9,6 +9,6 @@ export const siteConfig = {
     githubProfile: "https://github.com/uplusion23",
     github: "https://github.com/uplusion23/forge-ui",
   },
-}
+};
 
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;

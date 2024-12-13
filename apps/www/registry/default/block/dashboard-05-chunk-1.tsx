@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Card,
@@ -7,8 +7,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Progress } from "@/registry/default/ui/progress"
+} from "@/registry/default/ui/card";
+import { Progress } from "@/registry/default/ui/progress";
 
 export default function Component() {
   return (
@@ -24,5 +24,5 @@ export default function Component() {
         <Progress value={25} aria-label="25% increase" />
       </CardFooter>
     </Card>
-  )
+  );
 }

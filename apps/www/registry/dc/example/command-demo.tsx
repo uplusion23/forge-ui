@@ -5,7 +5,7 @@ import {
   GearIcon,
   PersonIcon,
   RocketIcon,
-} from "@radix-ui/react-icons"
+} from "@radix-ui/react-icons";
 
 import {
   Command,
@@ -16,7 +16,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/registry/dc/ui/command"
+} from "@/registry/dc/ui/command";
 
 export default function CommandDemo() {
   return (
@@ -58,5 +58,5 @@ export default function CommandDemo() {
         </CommandGroup>
       </CommandList>
     </Command>
-  )
+  );
 }

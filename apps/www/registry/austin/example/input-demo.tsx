@@ -1,5 +1,5 @@
-import { Input } from "@/registry/austin/ui/input"
+import { Input } from "@/registry/austin/ui/input";
 
 export default function InputDemo() {
-  return <Input type="email" placeholder="Email" />
+  return <Input type="email" placeholder="Email" />;
 }

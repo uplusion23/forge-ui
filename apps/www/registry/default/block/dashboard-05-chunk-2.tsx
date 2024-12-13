@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Card,
@@ -7,8 +7,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Progress } from "@/registry/default/ui/progress"
+} from "@/registry/default/ui/card";
+import { Progress } from "@/registry/default/ui/progress";
 
 export default function Component() {
   return (
@@ -18,13 +18,11 @@ export default function Component() {
         <CardTitle className="text-4xl">$5,329</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="text-xs text-muted-foreground">
-          +10% from last month
-        </div>
+        <div className="text-xs text-muted-foreground">+10% from last month</div>
       </CardContent>
       <CardFooter>
         <Progress value={12} aria-label="12% increase" />
       </CardFooter>
     </Card>
-  )
+  );
 }

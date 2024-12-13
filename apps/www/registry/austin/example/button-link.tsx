@@ -1,5 +1,5 @@
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 
 export default function ButtonLink() {
-  return <Button variant="link">Link</Button>
+  return <Button variant="link">Link</Button>;
 }

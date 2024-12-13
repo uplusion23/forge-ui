@@ -1,22 +1,14 @@
-"use client"
+"use client";
 
-import { Button } from "@/registry/dc/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/dc/ui/card"
+import { Button } from "@/registry/dc/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/dc/ui/card";
 
 export default function Component() {
   return (
     <Card x-chunk="dashboard-07-chunk-5">
       <CardHeader>
         <CardTitle>Archive Product</CardTitle>
-        <CardDescription>
-          Lipsum dolor sit amet, consectetur adipiscing elit.
-        </CardDescription>
+        <CardDescription>Lipsum dolor sit amet, consectetur adipiscing elit.</CardDescription>
       </CardHeader>
       <CardContent>
         <div></div>
@@ -25,5 +17,5 @@ export default function Component() {
         </Button>
       </CardContent>
     </Card>
-  )
+  );
 }

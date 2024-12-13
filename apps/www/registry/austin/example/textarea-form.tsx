@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Form,
   FormControl,
@@ -13,9 +13,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/austin/ui/form"
-import { Textarea } from "@/registry/austin/ui/textarea"
-import { toast } from "@/registry/austin/ui/use-toast"
+} from "@/registry/austin/ui/form";
+import { Textarea } from "@/registry/austin/ui/textarea";
+import { toast } from "@/registry/austin/ui/use-toast";
 
 const FormSchema = z.object({
   bio: z
@@ -26,12 +26,12 @@ const FormSchema = z.object({
     .max(160, {
       message: "Bio must not be longer than 30 characters.",
     }),
-})
+});
 
 export default function TextareaForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -41,7 +41,7 @@ export default function TextareaForm() {
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -70,5 +70,5 @@ export default function TextareaForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Button } from "@/registry/dc/ui/button"
+import { Button } from "@/registry/dc/ui/button";
 import {
   Card,
   CardContent,
@@ -6,16 +6,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/dc/ui/card"
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
+} from "@/registry/dc/ui/card";
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/dc/ui/select"
+} from "@/registry/dc/ui/select";
 
 export default function CardWithForm() {
   return (
@@ -53,5 +53,5 @@ export default function CardWithForm() {
         <Button>Deploy</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -1,13 +1,6 @@
-import {
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  CreditCard,
-  MoreVertical,
-  Truck,
-} from "lucide-react"
+import { ChevronLeft, ChevronRight, Copy, CreditCard, MoreVertical, Truck } from "lucide-react";
 
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
@@ -15,20 +8,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/austin/ui/dropdown-menu"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-} from "@/registry/austin/ui/pagination"
-import { Separator } from "@/registry/austin/ui/separator"
+} from "@/registry/austin/ui/dropdown-menu";
+import { Pagination, PaginationContent, PaginationItem } from "@/registry/austin/ui/pagination";
+import { Separator } from "@/registry/austin/ui/separator";
 
 export default function Component() {
   return (
@@ -51,9 +40,7 @@ export default function Component() {
         <div className="ml-auto flex items-center gap-1">
           <Button size="sm" variant="outline" className="h-8 gap-1">
             <Truck className="h-3.5 w-3.5" />
-            <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">
-              Track Order
-            </span>
+            <span className="lg:sr-only xl:not-sr-only xl:whitespace-nowrap">Track Order</span>
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -120,9 +107,7 @@ export default function Component() {
           </div>
           <div className="grid auto-rows-max gap-3">
             <div className="font-semibold">Billing Information</div>
-            <div className="text-muted-foreground">
-              Same as shipping address
-            </div>
+            <div className="text-muted-foreground">Same as shipping address</div>
           </div>
         </div>
         <Separator className="my-4" />
@@ -183,5 +168,5 @@ export default function Component() {
         </Pagination>
       </CardFooter>
     </Card>
-  )
+  );
 }

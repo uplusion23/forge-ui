@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
   Card,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from "@/registry/default/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from "@/registry/default/ui/chart";
 
-export const description = "A bar chart"
+export const description = "A bar chart";
 
 const chartData = [
   { month: "January", desktop: 186 },
@@ -27,14 +27,14 @@ const chartData = [
   { month: "April", desktop: 73 },
   { month: "May", desktop: 209 },
   { month: "June", desktop: 214 },
-]
+];
 
 const chartConfig = {
   desktop: {
     label: "Desktop",
     color: "hsl(var(--chart-1))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -54,10 +54,7 @@ export default function Component() {
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8} />
           </BarChart>
         </ChartContainer>
@@ -71,5 +68,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

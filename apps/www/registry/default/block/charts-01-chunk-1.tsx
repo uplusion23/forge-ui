@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -8,12 +8,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from "@/registry/default/ui/card";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/default/ui/chart";
 
 export default function Component() {
   return (
@@ -23,18 +19,14 @@ export default function Component() {
           <CardDescription>Resting HR</CardDescription>
           <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">
             62
-            <span className="text-sm font-normal tracking-normal text-muted-foreground">
-              bpm
-            </span>
+            <span className="text-sm font-normal tracking-normal text-muted-foreground">bpm</span>
           </CardTitle>
         </div>
         <div>
           <CardDescription>Variability</CardDescription>
           <CardTitle className="flex items-baseline gap-1 text-4xl tabular-nums">
             35
-            <span className="text-sm font-normal tracking-normal text-muted-foreground">
-              ms
-            </span>
+            <span className="text-sm font-normal tracking-normal text-muted-foreground">ms</span>
           </CardTitle>
         </div>
       </CardHeader>
@@ -101,7 +93,7 @@ export default function Component() {
               tickFormatter={(value) => {
                 return new Date(value).toLocaleDateString("en-US", {
                   weekday: "short",
-                })
+                });
               }}
             />
             <Line
@@ -126,7 +118,7 @@ export default function Component() {
                       day: "numeric",
                       month: "long",
                       year: "numeric",
-                    })
+                    });
                   }}
                 />
               }
@@ -136,5 +128,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

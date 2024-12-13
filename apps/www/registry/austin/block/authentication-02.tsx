@@ -1,43 +1,35 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
-import { Input } from "@/registry/austin/ui/input"
-import { Label } from "@/registry/austin/ui/label"
+} from "@/registry/austin/ui/card";
+import { Input } from "@/registry/austin/ui/input";
+import { Label } from "@/registry/austin/ui/label";
 
 export const description =
-  "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account."
+  "A login form with email and password. There's an option to login with Google and a link to sign up if you don't have an account.";
 
-export const iframeHeight = "600px"
+export const iframeHeight = "600px";
 
-export const containerClassName =
-  "w-full h-screen flex items-center justify-center px-4"
+export const containerClassName = "w-full h-screen flex items-center justify-center px-4";
 
 export default function LoginForm() {
   return (
     <Card className="mx-auto max-w-sm">
       <CardHeader>
         <CardTitle className="text-2xl">Login</CardTitle>
-        <CardDescription>
-          Enter your email below to login to your account
-        </CardDescription>
+        <CardDescription>Enter your email below to login to your account</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="m@example.com"
-              required
-            />
+            <Input id="email" type="email" placeholder="m@example.com" required />
           </div>
           <div className="grid gap-2">
             <div className="flex items-center">
@@ -63,5 +55,5 @@ export default function LoginForm() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

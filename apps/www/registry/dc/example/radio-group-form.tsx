@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/registry/dc/ui/button"
+import { Button } from "@/registry/dc/ui/button";
 import {
   Form,
   FormControl,
@@ -12,20 +12,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/dc/ui/form"
-import { RadioGroup, RadioGroupItem } from "@/registry/dc/ui/radio-group"
-import { toast } from "@/registry/dc/ui/use-toast"
+} from "@/registry/dc/ui/form";
+import { RadioGroup, RadioGroupItem } from "@/registry/dc/ui/radio-group";
+import { toast } from "@/registry/dc/ui/use-toast";
 
 const FormSchema = z.object({
   type: z.enum(["all", "mentions", "none"], {
     required_error: "You need to select a notification type.",
   }),
-})
+});
 
 export default function RadioGroupForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -35,7 +35,7 @@ export default function RadioGroupForm() {
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -57,17 +57,13 @@ export default function RadioGroupForm() {
                     <FormControl>
                       <RadioGroupItem value="all" />
                     </FormControl>
-                    <FormLabel className="font-normal">
-                      All new messages
-                    </FormLabel>
+                    <FormLabel className="font-normal">All new messages</FormLabel>
                   </FormItem>
                   <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
                       <RadioGroupItem value="mentions" />
                     </FormControl>
-                    <FormLabel className="font-normal">
-                      Direct messages and mentions
-                    </FormLabel>
+                    <FormLabel className="font-normal">Direct messages and mentions</FormLabel>
                   </FormItem>
                   <FormItem className="flex items-center space-x-3 space-y-0">
                     <FormControl>
@@ -84,5 +80,5 @@ export default function RadioGroupForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

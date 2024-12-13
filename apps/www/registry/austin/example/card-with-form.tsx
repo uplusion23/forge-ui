@@ -1,4 +1,4 @@
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
@@ -6,16 +6,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
-import { Input } from "@/registry/austin/ui/input"
-import { Label } from "@/registry/austin/ui/label"
+} from "@/registry/austin/ui/card";
+import { Input } from "@/registry/austin/ui/input";
+import { Label } from "@/registry/austin/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/austin/ui/select"
+} from "@/registry/austin/ui/select";
 
 export default function CardWithForm() {
   return (
@@ -53,5 +53,5 @@ export default function CardWithForm() {
         <Button>Deploy</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

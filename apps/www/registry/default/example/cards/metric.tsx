@@ -1,15 +1,15 @@
-import { useTheme } from "next-themes"
-import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts"
+import { useTheme } from "next-themes";
+import { Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 
-import { useConfig } from "@/hooks/use-config"
+import { useConfig } from "@/hooks/use-config";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { themes } from "@/registry/themes"
+} from "@/registry/default/ui/card";
+import { themes } from "@/registry/themes";
 
 const data = [
   {
@@ -40,13 +40,13 @@ const data = [
     average: 349,
     today: 430,
   },
-]
+];
 
 export function CardsMetric() {
-  const { theme: mode } = useTheme()
-  const [config] = useConfig()
+  const { theme: mode } = useTheme();
+  const [config] = useConfig();
 
-  const theme = themes.find((theme) => theme.name === config.theme)
+  const theme = themes.find((theme) => theme.name === config.theme);
 
   return (
     <Card>
@@ -86,16 +86,14 @@ export function CardsMetric() {
                             <span className="text-[0.70rem] uppercase text-muted-foreground">
                               Today
                             </span>
-                            <span className="font-bold">
-                              {payload[1].value}
-                            </span>
+                            <span className="font-bold">{payload[1].value}</span>
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   }
 
-                  return null
+                  return null;
                 }}
               />
               <Line
@@ -138,5 +136,5 @@ export function CardsMetric() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,21 +1,18 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
 
 export function MainNav() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return (
     <div className="mr-4 hidden md:flex">
-      <Link
-        href="/"
-        className="mr-4 flex shrink-0 items-center space-x-2 lg:mr-6"
-      >
+      <Link href="/" className="mr-4 flex shrink-0 items-center space-x-2 lg:mr-6">
         <Icons.logo className="size-4" />
         <span className="hidden whitespace-nowrap font-mono text-sm font-bold lg:inline-block">
           {siteConfig.name}
@@ -26,7 +23,7 @@ export function MainNav() {
           href="/docs"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            pathname === "/docs" ? "text-foreground" : "text-foreground/60",
           )}
         >
           Docs
@@ -38,7 +35,7 @@ export function MainNav() {
             pathname?.startsWith("/docs/components") &&
               !pathname?.startsWith("/docs/component/chart")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
           Components
@@ -47,9 +44,7 @@ export function MainNav() {
           href="/blocks"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blocks")
-              ? "text-foreground"
-              : "text-foreground/60"
+            pathname?.startsWith("/blocks") ? "text-foreground" : "text-foreground/60",
           )}
         >
           Blocks
@@ -58,10 +53,9 @@ export function MainNav() {
           href="/charts"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/docs/component/chart") ||
-              pathname?.startsWith("/charts")
+            pathname?.startsWith("/docs/component/chart") || pathname?.startsWith("/charts")
               ? "text-foreground"
-              : "text-foreground/60"
+              : "text-foreground/60",
           )}
         >
           Charts
@@ -70,9 +64,7 @@ export function MainNav() {
           href="/themes"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/themes")
-              ? "text-foreground"
-              : "text-foreground/60"
+            pathname?.startsWith("/themes") ? "text-foreground" : "text-foreground/60",
           )}
         >
           Themes
@@ -81,9 +73,7 @@ export function MainNav() {
           href="/examples"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/examples")
-              ? "text-foreground"
-              : "text-foreground/60"
+            pathname?.startsWith("/examples") ? "text-foreground" : "text-foreground/60",
           )}
         >
           Examples
@@ -92,14 +82,12 @@ export function MainNav() {
           href="/colors"
           className={cn(
             "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/colors")
-              ? "text-foreground"
-              : "text-foreground/60"
+            pathname?.startsWith("/colors") ? "text-foreground" : "text-foreground/60",
           )}
         >
           Colors
         </Link>
       </nav>
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import { Checkbox } from "@/registry/austin/ui/checkbox"
-import { Label } from "@/registry/austin/ui/label"
+import { Checkbox } from "@/registry/austin/ui/checkbox";
+import { Label } from "@/registry/austin/ui/label";
 
 export default function LabelDemo() {
   return (
@@ -9,5 +9,5 @@ export default function LabelDemo() {
         <Label htmlFor="terms">Accept terms and conditions</Label>
       </div>
     </div>
-  )
+  );
 }

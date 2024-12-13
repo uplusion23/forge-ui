@@ -1,4 +1,4 @@
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/austin/ui/dialog"
-import { Input } from "@/registry/austin/ui/input"
-import { Label } from "@/registry/austin/ui/label"
+} from "@/registry/austin/ui/dialog";
+import { Input } from "@/registry/austin/ui/input";
+import { Label } from "@/registry/austin/ui/label";
 
 export default function DialogDemo() {
   return (
@@ -43,5 +43,5 @@ export default function DialogDemo() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

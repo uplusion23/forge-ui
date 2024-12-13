@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, Label, Rectangle, ReferenceLine, XAxis } from "recharts"
+import { Bar, BarChart, Label, Rectangle, ReferenceLine, XAxis } from "recharts";
 
 import {
   Card,
@@ -9,12 +9,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/austin/ui/chart"
+} from "@/registry/austin/ui/card";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/austin/ui/chart";
 
 export default function Component() {
   return (
@@ -89,7 +85,7 @@ export default function Component() {
               tickFormatter={(value) => {
                 return new Date(value).toLocaleDateString("en-US", {
                   weekday: "short",
-                })
+                });
               }}
             />
             <ChartTooltip
@@ -102,7 +98,7 @@ export default function Component() {
                       day: "numeric",
                       month: "long",
                       year: "numeric",
-                    })
+                    });
                   }}
                 />
               }
@@ -138,10 +134,10 @@ export default function Component() {
           <span className="font-medium text-foreground">53,305</span> steps.
         </CardDescription>
         <CardDescription>
-          You need <span className="font-medium text-foreground">12,584</span>{" "}
-          more steps to reach your goal.
+          You need <span className="font-medium text-foreground">12,584</span> more steps to reach
+          your goal.
         </CardDescription>
       </CardFooter>
     </Card>
-  )
+  );
 }

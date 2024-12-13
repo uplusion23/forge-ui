@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/default/ui/button";
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Checkbox } from "@/registry/default/ui/checkbox"
-import { Input } from "@/registry/default/ui/input"
+} from "@/registry/default/ui/card";
+import { Checkbox } from "@/registry/default/ui/checkbox";
+import { Input } from "@/registry/default/ui/input";
 
 export default function Component() {
   return (
@@ -39,5 +39,5 @@ export default function Component() {
         <Button>Save</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

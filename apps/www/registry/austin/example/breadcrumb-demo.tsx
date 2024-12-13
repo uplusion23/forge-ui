@@ -6,13 +6,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/austin/ui/breadcrumb"
+} from "@/registry/austin/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/austin/ui/dropdown-menu"
+} from "@/registry/austin/ui/dropdown-menu";
 
 export default function BreadcrumbDemo() {
   return (
@@ -45,5 +45,5 @@ export default function BreadcrumbDemo() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

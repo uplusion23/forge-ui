@@ -1,4 +1,4 @@
-import { Registry } from "@/registry/schema"
+import { Registry } from "@/registry/schema";
 
 export const ui: Registry = [
   {
@@ -177,6 +177,12 @@ export const ui: Registry = [
     files: ["ui/number-ticker.tsx"],
   },
   {
+    name: "page-banner",
+    type: "components:ui",
+    registryDependencies: ["button"],
+    files: ["ui/page-banner.tsx"],
+  },
+  {
     name: "pagination",
     type: "components:ui",
     registryDependencies: ["button"],
@@ -294,4 +300,4 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-tooltip"],
     files: ["ui/tooltip.tsx"],
   },
-]
+];

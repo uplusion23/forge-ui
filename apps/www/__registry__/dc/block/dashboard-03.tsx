@@ -15,10 +15,10 @@ import {
   SquareUser,
   Triangle,
   Turtle,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Badge } from "@/registry/dc/ui/badge"
-import { Button } from "@/registry/dc/ui/button"
+import { Badge } from "@/registry/dc/ui/badge";
+import { Button } from "@/registry/dc/ui/button";
 import {
   Drawer,
   DrawerContent,
@@ -26,29 +26,25 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/registry/dc/ui/drawer"
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
+} from "@/registry/dc/ui/drawer";
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/dc/ui/select"
-import { Textarea } from "@/registry/dc/ui/textarea"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/dc/ui/tooltip"
+} from "@/registry/dc/ui/select";
+import { Textarea } from "@/registry/dc/ui/textarea";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/dc/ui/tooltip";
 
 export const description =
-  "An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages."
+  "An AI playground with a sidebar navigation and a main content area. The playground has a header with a settings drawer and a share button. The sidebar has navigation links and a user menu. The main content area shows a form to configure the model and messages.";
 
-export const iframeHeight = "720px"
+export const iframeHeight = "720px";
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = "w-full h-full";
 
 export default function Dashboard() {
   return (
@@ -77,12 +73,7 @@ export default function Dashboard() {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-lg"
-                aria-label="Models"
-              >
+              <Button variant="ghost" size="icon" className="rounded-lg" aria-label="Models">
                 <Bot className="size-5" />
               </Button>
             </TooltipTrigger>
@@ -92,12 +83,7 @@ export default function Dashboard() {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-lg"
-                aria-label="API"
-              >
+              <Button variant="ghost" size="icon" className="rounded-lg" aria-label="API">
                 <Code2 className="size-5" />
               </Button>
             </TooltipTrigger>
@@ -107,12 +93,7 @@ export default function Dashboard() {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-lg"
-                aria-label="Documentation"
-              >
+              <Button variant="ghost" size="icon" className="rounded-lg" aria-label="Documentation">
                 <Book className="size-5" />
               </Button>
             </TooltipTrigger>
@@ -122,12 +103,7 @@ export default function Dashboard() {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="rounded-lg"
-                aria-label="Settings"
-              >
+              <Button variant="ghost" size="icon" className="rounded-lg" aria-label="Settings">
                 <Settings2 className="size-5" />
               </Button>
             </TooltipTrigger>
@@ -139,12 +115,7 @@ export default function Dashboard() {
         <nav className="mt-auto grid gap-1 p-2">
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="mt-auto rounded-lg"
-                aria-label="Help"
-              >
+              <Button variant="ghost" size="icon" className="mt-auto rounded-lg" aria-label="Help">
                 <LifeBuoy className="size-5" />
               </Button>
             </TooltipTrigger>
@@ -188,9 +159,7 @@ export default function Dashboard() {
               </DrawerHeader>
               <form className="grid w-full items-start gap-6 overflow-auto p-4 pt-0">
                 <fieldset className="grid gap-6 rounded-lg border p-4">
-                  <legend className="-ml-1 px-1 text-sm font-medium">
-                    Settings
-                  </legend>
+                  <legend className="-ml-1 px-1 text-sm font-medium">Settings</legend>
                   <div className="grid gap-3">
                     <Label htmlFor="model">Model</Label>
                     <Select>
@@ -206,10 +175,7 @@ export default function Dashboard() {
                             <Rabbit className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
-                                Neural{" "}
-                                <span className="font-medium text-foreground">
-                                  Genesis
-                                </span>
+                                Neural <span className="font-medium text-foreground">Genesis</span>
                               </p>
                               <p className="text-xs" data-description>
                                 Our fastest model for general use cases.
@@ -222,10 +188,7 @@ export default function Dashboard() {
                             <Bird className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
-                                Neural{" "}
-                                <span className="font-medium text-foreground">
-                                  Explorer
-                                </span>
+                                Neural <span className="font-medium text-foreground">Explorer</span>
                               </p>
                               <p className="text-xs" data-description>
                                 Performance and speed for efficiency.
@@ -238,14 +201,10 @@ export default function Dashboard() {
                             <Turtle className="size-5" />
                             <div className="grid gap-0.5">
                               <p>
-                                Neural{" "}
-                                <span className="font-medium text-foreground">
-                                  Quantum
-                                </span>
+                                Neural <span className="font-medium text-foreground">Quantum</span>
                               </p>
                               <p className="text-xs" data-description>
-                                The most powerful model for complex
-                                computations.
+                                The most powerful model for complex computations.
                               </p>
                             </div>
                           </div>
@@ -267,9 +226,7 @@ export default function Dashboard() {
                   </div>
                 </fieldset>
                 <fieldset className="grid gap-6 rounded-lg border p-4">
-                  <legend className="-ml-1 px-1 text-sm font-medium">
-                    Messages
-                  </legend>
+                  <legend className="-ml-1 px-1 text-sm font-medium">Messages</legend>
                   <div className="grid gap-3">
                     <Label htmlFor="role">Role</Label>
                     <Select defaultValue="system">
@@ -291,11 +248,7 @@ export default function Dashboard() {
               </form>
             </DrawerContent>
           </Drawer>
-          <Button
-            variant="outline"
-            size="sm"
-            className="ml-auto gap-1.5 text-sm"
-          >
+          <Button variant="outline" size="sm" className="ml-auto gap-1.5 text-sm">
             <Share className="size-3.5" />
             Share
           </Button>
@@ -306,16 +259,11 @@ export default function Dashboard() {
           >
             <form className="grid w-full items-start gap-6">
               <fieldset className="grid gap-6 rounded-lg border p-4">
-                <legend className="-ml-1 px-1 text-sm font-medium">
-                  Settings
-                </legend>
+                <legend className="-ml-1 px-1 text-sm font-medium">Settings</legend>
                 <div className="grid gap-3">
                   <Label htmlFor="model">Model</Label>
                   <Select>
-                    <SelectTrigger
-                      id="model"
-                      className="items-start [&_[data-description]]:hidden"
-                    >
+                    <SelectTrigger id="model" className="items-start [&_[data-description]]:hidden">
                       <SelectValue placeholder="Select a model" />
                     </SelectTrigger>
                     <SelectContent>
@@ -324,10 +272,7 @@ export default function Dashboard() {
                           <Rabbit className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
-                              <span className="font-medium text-foreground">
-                                Genesis
-                              </span>
+                              Neural <span className="font-medium text-foreground">Genesis</span>
                             </p>
                             <p className="text-xs" data-description>
                               Our fastest model for general use cases.
@@ -340,10 +285,7 @@ export default function Dashboard() {
                           <Bird className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
-                              <span className="font-medium text-foreground">
-                                Explorer
-                              </span>
+                              Neural <span className="font-medium text-foreground">Explorer</span>
                             </p>
                             <p className="text-xs" data-description>
                               Performance and speed for efficiency.
@@ -356,10 +298,7 @@ export default function Dashboard() {
                           <Turtle className="size-5" />
                           <div className="grid gap-0.5">
                             <p>
-                              Neural{" "}
-                              <span className="font-medium text-foreground">
-                                Quantum
-                              </span>
+                              Neural <span className="font-medium text-foreground">Quantum</span>
                             </p>
                             <p className="text-xs" data-description>
                               The most powerful model for complex computations.
@@ -386,9 +325,7 @@ export default function Dashboard() {
                 </div>
               </fieldset>
               <fieldset className="grid gap-6 rounded-lg border p-4">
-                <legend className="-ml-1 px-1 text-sm font-medium">
-                  Messages
-                </legend>
+                <legend className="-ml-1 px-1 text-sm font-medium">Messages</legend>
                 <div className="grid gap-3">
                   <Label htmlFor="role">Role</Label>
                   <Select defaultValue="system">
@@ -404,11 +341,7 @@ export default function Dashboard() {
                 </div>
                 <div className="grid gap-3">
                   <Label htmlFor="content">Content</Label>
-                  <Textarea
-                    id="content"
-                    placeholder="You are a..."
-                    className="min-h-[9.5rem]"
-                  />
+                  <Textarea id="content" placeholder="You are a..." className="min-h-[9.5rem]" />
                 </div>
               </fieldset>
             </form>
@@ -458,5 +391,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { Badge } from "@/registry/austin/ui/badge"
+import { Badge } from "@/registry/austin/ui/badge";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/austin/ui/table"
+} from "@/registry/austin/ui/table";
 
 export default function Component() {
   return (
@@ -95,9 +95,7 @@ export default function Component() {
                   noah@example.com
                 </div>
               </TableCell>
-              <TableCell className="hidden sm:table-cell">
-                Subscription
-              </TableCell>
+              <TableCell className="hidden sm:table-cell">Subscription</TableCell>
               <TableCell className="hidden sm:table-cell">
                 <Badge className="text-xs" variant="secondary">
                   Fulfilled
@@ -174,5 +172,5 @@ export default function Component() {
         </Table>
       </CardContent>
     </Card>
-  )
+  );
 }

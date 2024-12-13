@@ -1,5 +1,5 @@
-import { Badge } from "@/registry/dc/ui/badge"
+import { Badge } from "@/registry/dc/ui/badge";
 
 export default function BadgeSecondary() {
-  return <Badge variant="secondary">Secondary</Badge>
+  return <Badge variant="secondary">Secondary</Badge>;
 }

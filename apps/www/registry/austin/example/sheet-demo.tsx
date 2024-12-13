@@ -1,6 +1,6 @@
-import { Button } from "@/registry/austin/ui/button"
-import { Input } from "@/registry/austin/ui/input"
-import { Label } from "@/registry/austin/ui/label"
+import { Button } from "@/registry/austin/ui/button";
+import { Input } from "@/registry/austin/ui/input";
+import { Label } from "@/registry/austin/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/austin/ui/sheet"
+} from "@/registry/austin/ui/sheet";
 
 export default function SheetDemo() {
   return (
@@ -46,5 +46,5 @@ export default function SheetDemo() {
         </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

@@ -1,8 +1,8 @@
 "use client"
 
+import { ArrowRightIcon } from "@radix-ui/react-icons"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 import { cn } from "@/lib/utils"
 import { ScrollArea, ScrollBar } from "@/registry/austin/ui/scroll-area"
@@ -11,42 +11,47 @@ const examples = [
   {
     name: "Mail",
     href: "/examples/mail",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/mail",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/mail",
   },
   {
     name: "Dashboard",
     href: "/examples/dashboard",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/dashboard",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/dashboard",
+  },
+  {
+    name: "Dashboard 02",
+    href: "/examples/dashboard-02",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/dashboard-02",
   },
   {
     name: "Cards",
     href: "/examples/cards",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/cards",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/cards",
   },
   {
     name: "Tasks",
     href: "/examples/tasks",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/tasks",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/tasks",
   },
   {
     name: "Playground",
     href: "/examples/playground",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/playground",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/playground",
   },
   {
     name: "Forms",
     href: "/examples/forms",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/forms",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/forms",
   },
   {
     name: "Music",
     href: "/examples/music",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/music",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/music",
   },
   {
     name: "Authentication",
     href: "/examples/authentication",
-    code: "https://github.com/forge-ui/tree/main/apps/www/app/(app)/examples/authentication",
+    code: "https://github.com/uplusion23/forge-ui/tree/main/apps/www/app/(app)/examples/authentication",
   },
 ]
 
@@ -65,7 +70,7 @@ export function ExamplesNav({ className, ...props }: ExamplesNavProps) {
               key={example.href}
               className={cn(
                 "flex h-7 items-center justify-center rounded-full px-4 text-center text-sm transition-colors hover:text-foreground",
-                pathname?.startsWith(example.href) ||
+                pathname?.toLowerCase() === example.href ||
                   (index === 0 && pathname === "/")
                   ? "bg-muted font-medium text-foreground dark:text-primary"
                   : "text-muted-foreground"

@@ -1,10 +1,5 @@
-import { Button } from "@/registry/dc/ui/button"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/registry/dc/ui/tooltip"
+import { Button } from "@/registry/dc/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/registry/dc/ui/tooltip";
 
 export default function TooltipDemo() {
   return (
@@ -18,5 +13,5 @@ export default function TooltipDemo() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
+  );
 }

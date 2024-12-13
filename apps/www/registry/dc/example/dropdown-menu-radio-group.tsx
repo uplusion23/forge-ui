@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/registry/dc/ui/button"
+import { Button } from "@/registry/dc/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,10 +11,10 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/dc/ui/dropdown-menu"
+} from "@/registry/dc/ui/dropdown-menu";
 
 export default function DropdownMenuRadioGroupDemo() {
-  const [position, setPosition] = React.useState("bottom")
+  const [position, setPosition] = React.useState("bottom");
 
   return (
     <DropdownMenu>
@@ -31,5 +31,5 @@ export default function DropdownMenuRadioGroupDemo() {
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { ChevronDownIcon, SlashIcon } from "@radix-ui/react-icons"
+import { ChevronDownIcon, SlashIcon } from "@radix-ui/react-icons";
 
 import {
   Breadcrumb,
@@ -7,13 +7,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/dc/ui/breadcrumb"
+} from "@/registry/dc/ui/breadcrumb";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/registry/dc/ui/dropdown-menu"
+} from "@/registry/dc/ui/dropdown-menu";
 
 export default function BreadcrumbWithDropdown() {
   return (
@@ -46,5 +46,5 @@ export default function BreadcrumbWithDropdown() {
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Registry } from "@/registry/schema"
+import { Registry } from "@/registry/schema";
 
 export const blocks: Registry = [
   {
@@ -145,4 +145,4 @@ export const blocks: Registry = [
     category: "Authentication",
     subcategory: "Login",
   },
-]
+];

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/austin/ui/button"
-import { Input } from "@/registry/austin/ui/input"
+import { Button } from "@/registry/austin/ui/button";
+import { Input } from "@/registry/austin/ui/input";
 
 export default function InputWithButton() {
   return (
@@ -7,5 +7,5 @@ export default function InputWithButton() {
       <Input type="email" placeholder="Email" />
       <Button type="submit">Subscribe</Button>
     </div>
-  )
+  );
 }

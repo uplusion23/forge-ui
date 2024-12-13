@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 import {
   ChevronLeft,
   ChevronRight,
@@ -20,9 +20,9 @@ import {
   ShoppingCart,
   Truck,
   Users2,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Badge } from "@/registry/dc/ui/badge"
+import { Badge } from "@/registry/dc/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -30,8 +30,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/dc/ui/breadcrumb"
-import { Button } from "@/registry/dc/ui/button"
+} from "@/registry/dc/ui/breadcrumb";
+import { Button } from "@/registry/dc/ui/button";
 import {
   Card,
   CardContent,
@@ -39,7 +39,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/dc/ui/card"
+} from "@/registry/dc/ui/card";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -48,16 +48,12 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/dc/ui/dropdown-menu"
-import { Input } from "@/registry/dc/ui/input"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-} from "@/registry/dc/ui/pagination"
-import { Progress } from "@/registry/dc/ui/progress"
-import { Separator } from "@/registry/dc/ui/separator"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/dc/ui/sheet"
+} from "@/registry/dc/ui/dropdown-menu";
+import { Input } from "@/registry/dc/ui/input";
+import { Pagination, PaginationContent, PaginationItem } from "@/registry/dc/ui/pagination";
+import { Progress } from "@/registry/dc/ui/progress";
+import { Separator } from "@/registry/dc/ui/separator";
+import { Sheet, SheetContent, SheetTrigger } from "@/registry/dc/ui/sheet";
 import {
   Table,
   TableBody,
@@ -65,20 +61,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/dc/ui/table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/dc/ui/tabs"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/dc/ui/tooltip"
+} from "@/registry/dc/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/dc/ui/tabs";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/dc/ui/tooltip";
 
 export const description =
-  "An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information."
+  "An orders dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. The main area has a list of recent orders with a filter and export button. The main area also has a detailed view of a single order with order details, shipping information, billing information, customer information, and payment information.";
 
-export const iframeHeight = "906px"
+export const iframeHeight = "906px";
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = "w-full h-full";
 
 export default function Dashboard() {
   return (
@@ -193,10 +185,7 @@ export default function Dashboard() {
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-foreground"
-                >
+                <Link href="#" className="flex items-center gap-4 px-2.5 text-foreground">
                   <ShoppingCart className="h-5 w-5" />
                   Orders
                 </Link>
@@ -253,11 +242,7 @@ export default function Dashboard() {
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                className="overflow-hidden rounded-full"
-              >
+              <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
                 <Image
                   src="/placeholder-user.jpg"
                   width={36}
@@ -286,8 +271,8 @@ export default function Dashboard() {
                 <CardHeader className="pb-3">
                   <CardTitle>Your Orders</CardTitle>
                   <CardDescription className="max-w-lg text-balance leading-relaxed">
-                    Introducing Our Dynamic Orders Dashboard for Seamless
-                    Management and Insightful Analysis.
+                    Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful
+                    Analysis.
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
@@ -300,9 +285,7 @@ export default function Dashboard() {
                   <CardTitle className="text-4xl">$1,329</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-xs text-muted-foreground">
-                    +25% from last week
-                  </div>
+                  <div className="text-xs text-muted-foreground">+25% from last week</div>
                 </CardContent>
                 <CardFooter>
                   <Progress value={25} aria-label="25% increase" />
@@ -314,9 +297,7 @@ export default function Dashboard() {
                   <CardTitle className="text-4xl">$5,329</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-xs text-muted-foreground">
-                    +10% from last month
-                  </div>
+                  <div className="text-xs text-muted-foreground">+10% from last month</div>
                 </CardContent>
                 <CardFooter>
                   <Progress value={12} aria-label="12% increase" />
@@ -333,11 +314,7 @@ export default function Dashboard() {
                 <div className="ml-auto flex items-center gap-2">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="h-7 gap-1 text-sm"
-                      >
+                      <Button variant="outline" size="sm" className="h-7 gap-1 text-sm">
                         <ListFilter className="h-3.5 w-3.5" />
                         <span className="sr-only sm:not-sr-only">Filter</span>
                       </Button>
@@ -345,22 +322,12 @@ export default function Dashboard() {
                     <DropdownMenuContent align="end">
                       <DropdownMenuLabel>Filter by</DropdownMenuLabel>
                       <DropdownMenuSeparator />
-                      <DropdownMenuCheckboxItem checked>
-                        Fulfilled
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuCheckboxItem>
-                        Declined
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuCheckboxItem>
-                        Refunded
-                      </DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem checked>Fulfilled</DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem>Declined</DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem>Refunded</DropdownMenuCheckboxItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="h-7 gap-1 text-sm"
-                  >
+                  <Button size="sm" variant="outline" className="h-7 gap-1 text-sm">
                     <File className="h-3.5 w-3.5" />
                     <span className="sr-only sm:not-sr-only">Export</span>
                   </Button>
@@ -370,24 +337,16 @@ export default function Dashboard() {
                 <Card x-chunk="dashboard-05-chunk-3">
                   <CardHeader className="px-7">
                     <CardTitle>Orders</CardTitle>
-                    <CardDescription>
-                      Recent orders from your store.
-                    </CardDescription>
+                    <CardDescription>Recent orders from your store.</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
                           <TableHead>Customer</TableHead>
-                          <TableHead className="hidden sm:table-cell">
-                            Type
-                          </TableHead>
-                          <TableHead className="hidden sm:table-cell">
-                            Status
-                          </TableHead>
-                          <TableHead className="hidden md:table-cell">
-                            Date
-                          </TableHead>
+                          <TableHead className="hidden sm:table-cell">Type</TableHead>
+                          <TableHead className="hidden sm:table-cell">Status</TableHead>
+                          <TableHead className="hidden md:table-cell">Date</TableHead>
                           <TableHead className="text-right">Amount</TableHead>
                         </TableRow>
                       </TableHeader>
@@ -399,17 +358,13 @@ export default function Dashboard() {
                               liam@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Sale
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Sale</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="secondary">
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-23
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-23</TableCell>
                           <TableCell className="text-right">$250.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -419,17 +374,13 @@ export default function Dashboard() {
                               olivia@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Refund
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Refund</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="outline">
                               Declined
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-24
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-24</TableCell>
                           <TableCell className="text-right">$150.00</TableCell>
                         </TableRow>
                         {/* <TableRow>
@@ -459,17 +410,13 @@ export default function Dashboard() {
                               noah@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Subscription
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Subscription</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="secondary">
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-25
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-25</TableCell>
                           <TableCell className="text-right">$350.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -479,17 +426,13 @@ export default function Dashboard() {
                               emma@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Sale
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Sale</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="secondary">
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-26
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-26</TableCell>
                           <TableCell className="text-right">$450.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -499,17 +442,13 @@ export default function Dashboard() {
                               liam@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Sale
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Sale</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="secondary">
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-23
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-23</TableCell>
                           <TableCell className="text-right">$250.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -519,17 +458,13 @@ export default function Dashboard() {
                               olivia@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Refund
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Refund</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="outline">
                               Declined
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-24
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-24</TableCell>
                           <TableCell className="text-right">$150.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -539,17 +474,13 @@ export default function Dashboard() {
                               emma@example.com
                             </div>
                           </TableCell>
-                          <TableCell className="hidden sm:table-cell">
-                            Sale
-                          </TableCell>
+                          <TableCell className="hidden sm:table-cell">Sale</TableCell>
                           <TableCell className="hidden sm:table-cell">
                             <Badge className="text-xs" variant="secondary">
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className="hidden md:table-cell">
-                            2023-06-26
-                          </TableCell>
+                          <TableCell className="hidden md:table-cell">2023-06-26</TableCell>
                           <TableCell className="text-right">$450.00</TableCell>
                         </TableRow>
                       </TableBody>
@@ -650,9 +581,7 @@ export default function Dashboard() {
                   </div>
                   <div className="grid auto-rows-max gap-3">
                     <div className="font-semibold">Billing Information</div>
-                    <div className="text-muted-foreground">
-                      Same as shipping address
-                    </div>
+                    <div className="text-muted-foreground">Same as shipping address</div>
                   </div>
                 </div>
                 <Separator className="my-4" />
@@ -717,5 +646,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

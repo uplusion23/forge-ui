@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
-import { Badge } from "@/registry/austin/ui/badge"
-import { Button } from "@/registry/austin/ui/button"
+import { Badge } from "@/registry/austin/ui/badge";
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 import {
   Table,
   TableBody,
@@ -19,7 +19,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/austin/ui/table"
+} from "@/registry/austin/ui/table";
 
 export default function Component() {
   return (
@@ -27,9 +27,7 @@ export default function Component() {
       <CardHeader className="flex flex-row items-center">
         <div className="grid gap-2">
           <CardTitle>Transactions</CardTitle>
-          <CardDescription>
-            Recent transactions from your store.
-          </CardDescription>
+          <CardDescription>Recent transactions from your store.</CardDescription>
         </div>
         <Button asChild size="sm" className="ml-auto gap-1">
           <Link href="#">
@@ -93,9 +91,7 @@ export default function Component() {
                   noah@example.com
                 </div>
               </TableCell>
-              <TableCell className="hidden xl:table-column">
-                Subscription
-              </TableCell>
+              <TableCell className="hidden xl:table-column">Subscription</TableCell>
               <TableCell className="hidden xl:table-column">
                 <Badge className="text-xs" variant="outline">
                   Approved
@@ -146,5 +142,5 @@ export default function Component() {
         </Table>
       </CardContent>
     </Card>
-  )
+  );
 }

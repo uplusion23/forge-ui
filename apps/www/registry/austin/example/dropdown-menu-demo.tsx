@@ -1,4 +1,4 @@
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +12,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/registry/austin/ui/dropdown-menu"
+} from "@/registry/austin/ui/dropdown-menu";
 
 export default function DropdownMenuDemo() {
   return (
@@ -71,5 +71,5 @@ export default function DropdownMenuDemo() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

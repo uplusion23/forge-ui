@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 
 import {
   Card,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/austin/ui/chart"
+} from "@/registry/austin/ui/chart";
 
-export const description = "A radar chart with a custom label"
+export const description = "A radar chart with a custom label";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -27,7 +27,7 @@ const chartData = [
   { month: "April", desktop: 73, mobile: 190 },
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
-]
+];
 
 const chartConfig = {
   desktop: {
@@ -38,22 +38,17 @@ const chartConfig = {
     label: "Mobile",
     color: "hsl(var(--chart-2))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
     <Card>
       <CardHeader className="items-center pb-4">
         <CardTitle>Radar Chart - Custom Label</CardTitle>
-        <CardDescription>
-          Showing total visitors for the last 6 months
-        </CardDescription>
+        <CardDescription>Showing total visitors for the last 6 months</CardDescription>
       </CardHeader>
       <CardContent className="pb-0">
-        <ChartContainer
-          config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
-        >
+        <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
           <RadarChart
             data={chartData}
             margin={{
@@ -63,14 +58,11 @@ export default function Component() {
               left: 10,
             }}
           >
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent indicator="line" />}
-            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
             <PolarAngleAxis
               dataKey="month"
               tick={({ x, y, textAnchor, value, index, ...props }) => {
-                const data = chartData[index]
+                const data = chartData[index];
 
                 return (
                   <text
@@ -84,25 +76,16 @@ export default function Component() {
                     <tspan>{data.desktop}</tspan>
                     <tspan className="fill-muted-foreground">/</tspan>
                     <tspan>{data.mobile}</tspan>
-                    <tspan
-                      x={x}
-                      dy={"1rem"}
-                      fontSize={12}
-                      className="fill-muted-foreground"
-                    >
+                    <tspan x={x} dy={"1rem"} fontSize={12} className="fill-muted-foreground">
                       {data.month}
                     </tspan>
                   </text>
-                )
+                );
               }}
             />
 
             <PolarGrid />
-            <Radar
-              dataKey="desktop"
-              fill="var(--color-desktop)"
-              fillOpacity={0.6}
-            />
+            <Radar dataKey="desktop" fill="var(--color-desktop)" fillOpacity={0.6} />
             <Radar dataKey="mobile" fill="var(--color-mobile)" />
           </RadarChart>
         </ChartContainer>
@@ -116,5 +99,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

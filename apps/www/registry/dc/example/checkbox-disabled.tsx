@@ -1,4 +1,4 @@
-import { Checkbox } from "@/registry/dc/ui/checkbox"
+import { Checkbox } from "@/registry/dc/ui/checkbox";
 
 export default function CheckboxDisabled() {
   return (
@@ -11,5 +11,5 @@ export default function CheckboxDisabled() {
         Accept terms and conditions
       </label>
     </div>
-  )
+  );
 }

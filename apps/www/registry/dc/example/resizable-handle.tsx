@@ -1,8 +1,4 @@
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/registry/dc/ui/resizable"
+import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/registry/dc/ui/resizable";
 
 export default function ResizableDemo() {
   return (
@@ -22,5 +18,5 @@ export default function ResizableDemo() {
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/registry/austin/ui/card"
+import { Card, CardContent } from "@/registry/austin/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/austin/ui/carousel"
+} from "@/registry/austin/ui/carousel";
 
 export default function CarouselSpacing() {
   return (
@@ -26,5 +26,5 @@ export default function CarouselSpacing() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

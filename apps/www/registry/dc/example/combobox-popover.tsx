@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { Button } from "@/registry/dc/ui/button"
+import { Button } from "@/registry/dc/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -10,17 +10,13 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/dc/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/dc/ui/popover"
+} from "@/registry/dc/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/dc/ui/popover";
 
 type Status = {
-  value: string
-  label: string
-}
+  value: string;
+  label: string;
+};
 
 const statuses: Status[] = [
   {
@@ -43,13 +39,11 @@ const statuses: Status[] = [
     value: "canceled",
     label: "Canceled",
   },
-]
+];
 
 export default function ComboboxPopover() {
-  const [open, setOpen] = React.useState(false)
-  const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
-    null
-  )
+  const [open, setOpen] = React.useState(false);
+  const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(null);
 
   return (
     <div className="flex items-center space-x-4">
@@ -72,10 +66,9 @@ export default function ComboboxPopover() {
                     value={status.value}
                     onSelect={(value) => {
                       setSelectedStatus(
-                        statuses.find((priority) => priority.value === value) ||
-                          null
-                      )
-                      setOpen(false)
+                        statuses.find((priority) => priority.value === value) || null,
+                      );
+                      setOpen(false);
                     }}
                   >
                     {status.label}
@@ -87,5 +80,5 @@ export default function ComboboxPopover() {
         </PopoverContent>
       </Popover>
     </div>
-  )
+  );
 }

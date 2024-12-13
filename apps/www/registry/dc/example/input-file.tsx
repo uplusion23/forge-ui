@@ -1,5 +1,5 @@
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
 
 export default function InputFile() {
   return (
@@ -7,5 +7,5 @@ export default function InputFile() {
       <Label htmlFor="picture">Picture</Label>
       <Input id="picture" type="file" />
     </div>
-  )
+  );
 }

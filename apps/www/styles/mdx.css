@@ -55,11 +55,11 @@
 }
 
 [data-line] mark {
-  @apply rounded-md bg-zinc-700/50 border-primary/50 p-1 border;
+  @apply rounded-md bg-zinc-700/50 border-primary/30 shadow-xl shadow-primary/45 p-1 border;
 }
 
 .dark [data-line] mark {
-  @apply bg-zinc-900 border-primary/50;
+  @apply bg-zinc-900 border-primary/30 shadow-xl shadow-primary/25;
 }
 
 [data-rehype-pretty-code-title] {

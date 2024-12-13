@@ -1,15 +1,11 @@
-"use client"
+"use client";
 
-import { CornerDownLeft, Mic, Paperclip } from "lucide-react"
+import { CornerDownLeft, Mic, Paperclip } from "lucide-react";
 
-import { Button } from "@/registry/austin/ui/button"
-import { Label } from "@/registry/austin/ui/label"
-import { Textarea } from "@/registry/austin/ui/textarea"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/austin/ui/tooltip"
+import { Button } from "@/registry/austin/ui/button";
+import { Label } from "@/registry/austin/ui/label";
+import { Textarea } from "@/registry/austin/ui/textarea";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/austin/ui/tooltip";
 
 export default function Component() {
   return (
@@ -50,5 +46,5 @@ export default function Component() {
         </Button>
       </div>
     </form>
-  )
+  );
 }

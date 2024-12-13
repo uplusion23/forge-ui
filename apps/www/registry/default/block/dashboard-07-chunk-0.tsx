@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Card,
@@ -6,19 +6,17 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
-import { Textarea } from "@/registry/default/ui/textarea"
+} from "@/registry/default/ui/card";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
+import { Textarea } from "@/registry/default/ui/textarea";
 
 export default function Component() {
   return (
     <Card x-chunk="dashboard-07-chunk-0">
       <CardHeader>
         <CardTitle>Product Details</CardTitle>
-        <CardDescription>
-          Lipsum dolor sit amet, consectetur adipiscing elit
-        </CardDescription>
+        <CardDescription>Lipsum dolor sit amet, consectetur adipiscing elit</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-6">
@@ -42,5 +40,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

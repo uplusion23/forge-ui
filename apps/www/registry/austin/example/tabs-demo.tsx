@@ -1,4 +1,4 @@
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
-import { Input } from "@/registry/austin/ui/input"
-import { Label } from "@/registry/austin/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/registry/austin/ui/tabs"
+} from "@/registry/austin/ui/card";
+import { Input } from "@/registry/austin/ui/input";
+import { Label } from "@/registry/austin/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/austin/ui/tabs";
 
 export default function TabsDemo() {
   return (
@@ -70,5 +65,5 @@ export default function TabsDemo() {
         </Card>
       </TabsContent>
     </Tabs>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 import {
   File,
   Home,
@@ -16,9 +16,9 @@ import {
   Settings,
   ShoppingCart,
   Users2,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Badge } from "@/registry/dc/ui/badge"
+import { Badge } from "@/registry/dc/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -26,8 +26,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/registry/dc/ui/breadcrumb"
-import { Button } from "@/registry/dc/ui/button"
+} from "@/registry/dc/ui/breadcrumb";
+import { Button } from "@/registry/dc/ui/button";
 import {
   Card,
   CardContent,
@@ -35,7 +35,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/dc/ui/card"
+} from "@/registry/dc/ui/card";
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -44,9 +44,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/dc/ui/dropdown-menu"
-import { Input } from "@/registry/dc/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/dc/ui/sheet"
+} from "@/registry/dc/ui/dropdown-menu";
+import { Input } from "@/registry/dc/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/registry/dc/ui/sheet";
 import {
   Table,
   TableBody,
@@ -54,20 +54,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/dc/ui/table"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/dc/ui/tabs"
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/registry/dc/ui/tooltip"
+} from "@/registry/dc/ui/table";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/dc/ui/tabs";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/registry/dc/ui/tooltip";
 
 export const description =
-  "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions."
+  "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.";
 
-export const iframeHeight = "820px"
+export const iframeHeight = "820px";
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = "w-full h-full";
 
 export default function Dashboard() {
   return (
@@ -189,10 +185,7 @@ export default function Dashboard() {
                   <ShoppingCart className="h-5 w-5" />
                   Orders
                 </Link>
-                <Link
-                  href="#"
-                  className="flex items-center gap-4 px-2.5 text-foreground"
-                >
+                <Link href="#" className="flex items-center gap-4 px-2.5 text-foreground">
                   <Package className="h-5 w-5" />
                   Products
                 </Link>
@@ -242,11 +235,7 @@ export default function Dashboard() {
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                className="overflow-hidden rounded-full"
-              >
+              <Button variant="outline" size="icon" className="overflow-hidden rounded-full">
                 <Image
                   src="/placeholder-user.jpg"
                   width={36}
@@ -282,34 +271,24 @@ export default function Dashboard() {
                   <DropdownMenuTrigger asChild>
                     <Button variant="outline" size="sm" className="h-7 gap-1">
                       <ListFilter className="h-3.5 w-3.5" />
-                      <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                        Filter
-                      </span>
+                      <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">Filter</span>
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Filter by</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuCheckboxItem checked>
-                      Active
-                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem checked>Active</DropdownMenuCheckboxItem>
                     <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>
-                      Archived
-                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Archived</DropdownMenuCheckboxItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <Button size="sm" variant="outline" className="h-7 gap-1">
                   <File className="h-3.5 w-3.5" />
-                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Export
-                  </span>
+                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">Export</span>
                 </Button>
                 <Button size="sm" className="h-7 gap-1">
                   <PlusCircle className="h-3.5 w-3.5" />
-                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Add Product
-                  </span>
+                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">Add Product</span>
                 </Button>
               </div>
             </div>
@@ -331,12 +310,8 @@ export default function Dashboard() {
                         <TableHead>Name</TableHead>
                         <TableHead>Status</TableHead>
                         <TableHead>Price</TableHead>
-                        <TableHead className="hidden md:table-cell">
-                          Total Sales
-                        </TableHead>
-                        <TableHead className="hidden md:table-cell">
-                          Created at
-                        </TableHead>
+                        <TableHead className="hidden md:table-cell">Total Sales</TableHead>
+                        <TableHead className="hidden md:table-cell">Created at</TableHead>
                         <TableHead>
                           <span className="sr-only">Actions</span>
                         </TableHead>
@@ -353,27 +328,17 @@ export default function Dashboard() {
                             width="64"
                           />
                         </TableCell>
-                        <TableCell className="font-medium">
-                          Laser Lemonade Machine
-                        </TableCell>
+                        <TableCell className="font-medium">Laser Lemonade Machine</TableCell>
                         <TableCell>
                           <Badge variant="outline">Draft</Badge>
                         </TableCell>
                         <TableCell>$499.99</TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          25
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          2023-07-12 10:42 AM
-                        </TableCell>
+                        <TableCell className="hidden md:table-cell">25</TableCell>
+                        <TableCell className="hidden md:table-cell">2023-07-12 10:42 AM</TableCell>
                         <TableCell>
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <Button
-                                aria-haspopup="true"
-                                size="icon"
-                                variant="ghost"
-                              >
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
                                 <MoreHorizontal className="h-4 w-4" />
                                 <span className="sr-only">Toggle menu</span>
                               </Button>
@@ -396,27 +361,17 @@ export default function Dashboard() {
                             width="64"
                           />
                         </TableCell>
-                        <TableCell className="font-medium">
-                          Hypernova Headphones
-                        </TableCell>
+                        <TableCell className="font-medium">Hypernova Headphones</TableCell>
                         <TableCell>
                           <Badge variant="outline">Active</Badge>
                         </TableCell>
                         <TableCell>$129.99</TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          100
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          2023-10-18 03:21 PM
-                        </TableCell>
+                        <TableCell className="hidden md:table-cell">100</TableCell>
+                        <TableCell className="hidden md:table-cell">2023-10-18 03:21 PM</TableCell>
                         <TableCell>
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <Button
-                                aria-haspopup="true"
-                                size="icon"
-                                variant="ghost"
-                              >
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
                                 <MoreHorizontal className="h-4 w-4" />
                                 <span className="sr-only">Toggle menu</span>
                               </Button>
@@ -439,27 +394,17 @@ export default function Dashboard() {
                             width="64"
                           />
                         </TableCell>
-                        <TableCell className="font-medium">
-                          AeroGlow Desk Lamp
-                        </TableCell>
+                        <TableCell className="font-medium">AeroGlow Desk Lamp</TableCell>
                         <TableCell>
                           <Badge variant="outline">Active</Badge>
                         </TableCell>
                         <TableCell>$39.99</TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          50
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          2023-11-29 08:15 AM
-                        </TableCell>
+                        <TableCell className="hidden md:table-cell">50</TableCell>
+                        <TableCell className="hidden md:table-cell">2023-11-29 08:15 AM</TableCell>
                         <TableCell>
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <Button
-                                aria-haspopup="true"
-                                size="icon"
-                                variant="ghost"
-                              >
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
                                 <MoreHorizontal className="h-4 w-4" />
                                 <span className="sr-only">Toggle menu</span>
                               </Button>
@@ -482,27 +427,17 @@ export default function Dashboard() {
                             width="64"
                           />
                         </TableCell>
-                        <TableCell className="font-medium">
-                          TechTonic Energy Drink
-                        </TableCell>
+                        <TableCell className="font-medium">TechTonic Energy Drink</TableCell>
                         <TableCell>
                           <Badge variant="secondary">Draft</Badge>
                         </TableCell>
                         <TableCell>$2.99</TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          0
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          2023-12-25 11:59 PM
-                        </TableCell>
+                        <TableCell className="hidden md:table-cell">0</TableCell>
+                        <TableCell className="hidden md:table-cell">2023-12-25 11:59 PM</TableCell>
                         <TableCell>
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <Button
-                                aria-haspopup="true"
-                                size="icon"
-                                variant="ghost"
-                              >
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
                                 <MoreHorizontal className="h-4 w-4" />
                                 <span className="sr-only">Toggle menu</span>
                               </Button>
@@ -525,27 +460,17 @@ export default function Dashboard() {
                             width="64"
                           />
                         </TableCell>
-                        <TableCell className="font-medium">
-                          Gamer Gear Pro Controller
-                        </TableCell>
+                        <TableCell className="font-medium">Gamer Gear Pro Controller</TableCell>
                         <TableCell>
                           <Badge variant="outline">Active</Badge>
                         </TableCell>
                         <TableCell>$59.99</TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          75
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          2024-01-01 12:00 AM
-                        </TableCell>
+                        <TableCell className="hidden md:table-cell">75</TableCell>
+                        <TableCell className="hidden md:table-cell">2024-01-01 12:00 AM</TableCell>
                         <TableCell>
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <Button
-                                aria-haspopup="true"
-                                size="icon"
-                                variant="ghost"
-                              >
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
                                 <MoreHorizontal className="h-4 w-4" />
                                 <span className="sr-only">Toggle menu</span>
                               </Button>
@@ -568,27 +493,17 @@ export default function Dashboard() {
                             width="64"
                           />
                         </TableCell>
-                        <TableCell className="font-medium">
-                          Luminous VR Headset
-                        </TableCell>
+                        <TableCell className="font-medium">Luminous VR Headset</TableCell>
                         <TableCell>
                           <Badge variant="outline">Active</Badge>
                         </TableCell>
                         <TableCell>$199.99</TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          30
-                        </TableCell>
-                        <TableCell className="hidden md:table-cell">
-                          2024-02-14 02:14 PM
-                        </TableCell>
+                        <TableCell className="hidden md:table-cell">30</TableCell>
+                        <TableCell className="hidden md:table-cell">2024-02-14 02:14 PM</TableCell>
                         <TableCell>
                           <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                              <Button
-                                aria-haspopup="true"
-                                size="icon"
-                                variant="ghost"
-                              >
+                              <Button aria-haspopup="true" size="icon" variant="ghost">
                                 <MoreHorizontal className="h-4 w-4" />
                                 <span className="sr-only">Toggle menu</span>
                               </Button>
@@ -606,8 +521,7 @@ export default function Dashboard() {
                 </CardContent>
                 <CardFooter>
                   <div className="text-xs text-muted-foreground">
-                    Showing <strong>1-10</strong> of <strong>32</strong>{" "}
-                    products
+                    Showing <strong>1-10</strong> of <strong>32</strong> products
                   </div>
                 </CardFooter>
               </Card>
@@ -616,5 +530,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/dc/ui/avatar"
-import { Card, CardContent, CardHeader, CardTitle } from "@/registry/dc/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/dc/ui/avatar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/dc/ui/card";
 
 export default function Component() {
   return (
@@ -17,9 +17,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Olivia Martin</p>
-            <p className="text-sm text-muted-foreground">
-              olivia.martin@email.com
-            </p>
+            <p className="text-sm text-muted-foreground">olivia.martin@email.com</p>
           </div>
           <div className="ml-auto font-medium">+$1,999.00</div>
         </div>
@@ -30,9 +28,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Jackson Lee</p>
-            <p className="text-sm text-muted-foreground">
-              jackson.lee@email.com
-            </p>
+            <p className="text-sm text-muted-foreground">jackson.lee@email.com</p>
           </div>
           <div className="ml-auto font-medium">+$39.00</div>
         </div>
@@ -43,9 +39,7 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Isabella Nguyen</p>
-            <p className="text-sm text-muted-foreground">
-              isabella.nguyen@email.com
-            </p>
+            <p className="text-sm text-muted-foreground">isabella.nguyen@email.com</p>
           </div>
           <div className="ml-auto font-medium">+$299.00</div>
         </div>
@@ -67,13 +61,11 @@ export default function Component() {
           </Avatar>
           <div className="grid gap-1">
             <p className="text-sm font-medium leading-none">Sofia Davis</p>
-            <p className="text-sm text-muted-foreground">
-              sofia.davis@email.com
-            </p>
+            <p className="text-sm text-muted-foreground">sofia.davis@email.com</p>
           </div>
           <div className="ml-auto font-medium">+$39.00</div>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

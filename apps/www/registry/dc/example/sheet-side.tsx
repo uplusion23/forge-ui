@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "@/registry/dc/ui/button"
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
+import { Button } from "@/registry/dc/ui/button";
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -12,11 +12,11 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/registry/dc/ui/sheet"
+} from "@/registry/dc/ui/sheet";
 
-const SHEET_SIDES = ["top", "right", "bottom", "left"] as const
+const SHEET_SIDES = ["top", "right", "bottom", "left"] as const;
 
-type SheetSide = (typeof SHEET_SIDES)[number]
+type SheetSide = (typeof SHEET_SIDES)[number];
 
 export default function SheetSide() {
   return (
@@ -56,5 +56,5 @@ export default function SheetSide() {
         </Sheet>
       ))}
     </div>
-  )
+  );
 }

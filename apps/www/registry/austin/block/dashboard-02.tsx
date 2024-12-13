@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 import {
   Bell,
   CircleUser,
@@ -10,17 +10,17 @@ import {
   Search,
   ShoppingCart,
   Users,
-} from "lucide-react"
+} from "lucide-react";
 
-import { Badge } from "@/registry/austin/ui/badge"
-import { Button } from "@/registry/austin/ui/button"
+import { Badge } from "@/registry/austin/ui/badge";
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,16 +28,16 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/austin/ui/dropdown-menu"
-import { Input } from "@/registry/austin/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/registry/austin/ui/sheet"
+} from "@/registry/austin/ui/dropdown-menu";
+import { Input } from "@/registry/austin/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/registry/austin/ui/sheet";
 
 export const description =
-  "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action."
+  "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
 
-export const iframeHeight = "800px"
+export const iframeHeight = "800px";
 
-export const containerClassName = "w-full h-full"
+export const containerClassName = "w-full h-full";
 
 export default function Dashboard() {
   return (
@@ -101,8 +101,7 @@ export default function Dashboard() {
               <CardHeader className="p-2 pt-0 md:p-4">
                 <CardTitle>Upgrade to Pro</CardTitle>
                 <CardDescription>
-                  Unlock all features and get unlimited access to our support
-                  team.
+                  Unlock all features and get unlimited access to our support team.
                 </CardDescription>
               </CardHeader>
               <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
@@ -118,21 +117,14 @@ export default function Dashboard() {
         <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
           <Sheet>
             <SheetTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                className="shrink-0 md:hidden"
-              >
+              <Button variant="outline" size="icon" className="shrink-0 md:hidden">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
               <nav className="grid gap-2 text-lg font-medium">
-                <Link
-                  href="#"
-                  className="flex items-center gap-2 text-lg font-semibold"
-                >
+                <Link href="#" className="flex items-center gap-2 text-lg font-semibold">
                   <Package2 className="h-6 w-6" />
                   <span className="sr-only">Acme Inc</span>
                 </Link>
@@ -180,8 +172,7 @@ export default function Dashboard() {
                   <CardHeader>
                     <CardTitle>Upgrade to Pro</CardTitle>
                     <CardDescription>
-                      Unlock all features and get unlimited access to our
-                      support team.
+                      Unlock all features and get unlimited access to our support team.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -231,9 +222,7 @@ export default function Dashboard() {
             className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm"
           >
             <div className="flex flex-col items-center gap-1 text-center">
-              <h3 className="text-2xl font-bold tracking-tight">
-                You have no products
-              </h3>
+              <h3 className="text-2xl font-bold tracking-tight">You have no products</h3>
               <p className="text-sm text-muted-foreground">
                 You can start selling as soon as you add a product.
               </p>
@@ -243,5 +232,5 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
-  )
+  );
 }

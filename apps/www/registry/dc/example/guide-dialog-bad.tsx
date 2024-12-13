@@ -1,11 +1,5 @@
-import { Button } from "@/registry/dc/ui/button"
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/registry/dc/ui/card"
+import { Button } from "@/registry/dc/ui/button";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/registry/dc/ui/card";
 
 export default function GuideDialogBad() {
   return (
@@ -13,8 +7,8 @@ export default function GuideDialogBad() {
       <CardHeader>
         <CardTitle>Are you absolutely sure?</CardTitle>
         <CardDescription>
-          This action cannot be undone. This will permanently delete your
-          account and remove your data from our servers.
+          This action cannot be undone. This will permanently delete your account and remove your
+          data from our servers.
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex justify-end gap-2">
@@ -22,5 +16,5 @@ export default function GuideDialogBad() {
         <Button variant="destructive">Delete</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

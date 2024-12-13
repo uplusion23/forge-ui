@@ -1,24 +1,16 @@
-"use client"
+"use client";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/dc/ui/card"
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
-import { Textarea } from "@/registry/dc/ui/textarea"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/dc/ui/card";
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
+import { Textarea } from "@/registry/dc/ui/textarea";
 
 export default function Component() {
   return (
     <Card x-chunk="dashboard-07-chunk-0">
       <CardHeader>
         <CardTitle>Product Details</CardTitle>
-        <CardDescription>
-          Lipsum dolor sit amet, consectetur adipiscing elit
-        </CardDescription>
+        <CardDescription>Lipsum dolor sit amet, consectetur adipiscing elit</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-6">
@@ -42,5 +34,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

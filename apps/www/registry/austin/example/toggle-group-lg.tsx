@@ -1,10 +1,6 @@
-import {
-  FontBoldIcon,
-  FontItalicIcon,
-  UnderlineIcon,
-} from "@radix-ui/react-icons"
+import { FontBoldIcon, FontItalicIcon, UnderlineIcon } from "@radix-ui/react-icons";
 
-import { ToggleGroup, ToggleGroupItem } from "@/registry/austin/ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from "@/registry/austin/ui/toggle-group";
 
 export default function ToggleGroupDemo() {
   return (
@@ -19,5 +15,5 @@ export default function ToggleGroupDemo() {
         <UnderlineIcon className="h-4 w-4" />
       </ToggleGroupItem>
     </ToggleGroup>
-  )
+  );
 }

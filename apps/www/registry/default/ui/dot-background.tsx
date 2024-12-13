@@ -1,29 +1,20 @@
-import { useId } from "react"
+import { useId } from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface DotBackgroundProps
   extends Omit<
     React.SVGProps<SVGSVGElement>,
-    | "width"
-    | "height"
-    | "x"
-    | "y"
-    | "cx"
-    | "cy"
-    | "cr"
-    | "className"
-    | "ref"
-    | "key"
+    "width" | "height" | "x" | "y" | "cx" | "cy" | "cr" | "className" | "ref" | "key"
   > {
-  width?: string | number
-  height?: string | number
-  x?: string | number
-  y?: string | number
-  cx?: string | number
-  cy?: string | number
-  cr?: string | number
-  className?: string
+  width?: string | number;
+  height?: string | number;
+  x?: string | number;
+  y?: string | number;
+  cx?: string | number;
+  cy?: string | number;
+  cr?: string | number;
+  className?: string;
 }
 
 function DotBackground({
@@ -37,14 +28,14 @@ function DotBackground({
   className,
   ...props
 }: DotBackgroundProps) {
-  const id = useId()
+  const id = useId();
 
   return (
     <svg
       aria-hidden="true"
       className={cn(
         "pointer-events-none absolute inset-0 size-full fill-foreground/20 dark:fill-muted/80",
-        className
+        className,
       )}
       {...props}
     >
@@ -63,7 +54,7 @@ function DotBackground({
       </defs>
       <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
     </svg>
-  )
+  );
 }
 
-export { DotBackground }
+export { DotBackground };

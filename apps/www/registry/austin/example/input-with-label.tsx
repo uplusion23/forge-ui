@@ -1,5 +1,5 @@
-import { Input } from "@/registry/austin/ui/input"
-import { Label } from "@/registry/austin/ui/label"
+import { Input } from "@/registry/austin/ui/input";
+import { Label } from "@/registry/austin/ui/label";
 
 export default function InputWithLabel() {
   return (
@@ -7,5 +7,5 @@ export default function InputWithLabel() {
       <Label htmlFor="email">Email</Label>
       <Input type="email" id="email" placeholder="Email" />
     </div>
-  )
+  );
 }

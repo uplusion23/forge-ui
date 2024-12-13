@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, LabelList, XAxis, YAxis } from "recharts";
 
-import { Card, CardContent, CardFooter } from "@/registry/dc/ui/card"
-import { ChartContainer } from "@/registry/dc/ui/chart"
-import { Separator } from "@/registry/dc/ui/separator"
+import { Card, CardContent, CardFooter } from "@/registry/dc/ui/card";
+import { ChartContainer } from "@/registry/dc/ui/chart";
+import { Separator } from "@/registry/dc/ui/separator";
 
 export default function Component() {
   return (
@@ -85,9 +85,7 @@ export default function Component() {
             <div className="text-xs text-muted-foreground">Move</div>
             <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
               562
-              <span className="text-sm font-normal text-muted-foreground">
-                kcal
-              </span>
+              <span className="text-sm font-normal text-muted-foreground">kcal</span>
             </div>
           </div>
           <Separator orientation="vertical" className="mx-2 h-10 w-px" />
@@ -95,9 +93,7 @@ export default function Component() {
             <div className="text-xs text-muted-foreground">Exercise</div>
             <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
               73
-              <span className="text-sm font-normal text-muted-foreground">
-                min
-              </span>
+              <span className="text-sm font-normal text-muted-foreground">min</span>
             </div>
           </div>
           <Separator orientation="vertical" className="mx-2 h-10 w-px" />
@@ -105,13 +101,11 @@ export default function Component() {
             <div className="text-xs text-muted-foreground">Stand</div>
             <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none">
               14
-              <span className="text-sm font-normal text-muted-foreground">
-                hr
-              </span>
+              <span className="text-sm font-normal text-muted-foreground">hr</span>
             </div>
           </div>
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

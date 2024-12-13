@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { Pie, PieChart, Sector } from "recharts"
-import { PieSectorDataItem } from "recharts/types/polar/Pie"
+import { TrendingUp } from "lucide-react";
+import { Pie, PieChart, Sector } from "recharts";
+import { PieSectorDataItem } from "recharts/types/polar/Pie";
 
 import {
   Card,
@@ -11,15 +11,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/dc/ui/card"
+} from "@/registry/dc/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/dc/ui/chart"
+} from "@/registry/dc/ui/chart";
 
-export const description = "A donut chart with an active sector"
+export const description = "A donut chart with an active sector";
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -27,7 +27,7 @@ const chartData = [
   { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
   { browser: "other", visitors: 90, fill: "var(--color-other)" },
-]
+];
 
 const chartConfig = {
   visitors: {
@@ -53,7 +53,7 @@ const chartConfig = {
     label: "Other",
     color: "hsl(var(--chart-5))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -63,15 +63,9 @@ export default function Component() {
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
-        <ChartContainer
-          config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
-        >
+        <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
           <PieChart>
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
             <Pie
               data={chartData}
               dataKey="visitors"
@@ -79,10 +73,7 @@ export default function Component() {
               innerRadius={60}
               strokeWidth={5}
               activeIndex={0}
-              activeShape={({
-                outerRadius = 0,
-                ...props
-              }: PieSectorDataItem) => (
+              activeShape={({ outerRadius = 0, ...props }: PieSectorDataItem) => (
                 <Sector {...props} outerRadius={outerRadius + 10} />
               )}
             />
@@ -98,5 +89,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

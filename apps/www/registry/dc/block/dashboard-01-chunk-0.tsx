@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { DollarSign } from "lucide-react"
+import { DollarSign } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/registry/dc/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/dc/ui/card";
 
 export default function Component() {
   return (
@@ -16,5 +16,5 @@ export default function Component() {
         <p className="text-xs text-muted-foreground">+20.1% from last month</p>
       </CardContent>
     </Card>
-  )
+  );
 }

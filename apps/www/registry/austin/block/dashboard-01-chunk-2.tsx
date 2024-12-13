@@ -1,13 +1,8 @@
-"use client"
+"use client";
 
-import { CreditCard } from "lucide-react"
+import { CreditCard } from "lucide-react";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/registry/austin/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/registry/austin/ui/card";
 
 export default function Component() {
   return (
@@ -21,5 +16,5 @@ export default function Component() {
         <p className="text-xs text-muted-foreground">+19% from last month</p>
       </CardContent>
     </Card>
-  )
+  );
 }

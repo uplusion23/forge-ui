@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/austin/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/austin/ui/button";
 import {
   Command,
   CommandEmpty,
@@ -14,7 +14,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/austin/ui/command"
+} from "@/registry/austin/ui/command";
 import {
   Form,
   FormControl,
@@ -23,13 +23,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/registry/austin/ui/form"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/austin/ui/popover"
-import { toast } from "@/registry/austin/ui/use-toast"
+} from "@/registry/austin/ui/form";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/austin/ui/popover";
+import { toast } from "@/registry/austin/ui/use-toast";
 
 const languages = [
   { label: "English", value: "en" },
@@ -41,18 +37,18 @@ const languages = [
   { label: "Japanese", value: "ja" },
   { label: "Korean", value: "ko" },
   { label: "Chinese", value: "zh" },
-] as const
+] as const;
 
 const FormSchema = z.object({
   language: z.string({
     required_error: "Please select a language.",
   }),
-})
+});
 
 export default function ComboboxForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -62,7 +58,7 @@ export default function ComboboxForm() {
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -82,13 +78,11 @@ export default function ComboboxForm() {
                       role="combobox"
                       className={cn(
                         "w-[200px] justify-between",
-                        !field.value && "text-muted-foreground"
+                        !field.value && "text-muted-foreground",
                       )}
                     >
                       {field.value
-                        ? languages.find(
-                            (language) => language.value === field.value
-                          )?.label
+                        ? languages.find((language) => language.value === field.value)?.label
                         : "Select language"}
                       <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                     </Button>
@@ -96,10 +90,7 @@ export default function ComboboxForm() {
                 </PopoverTrigger>
                 <PopoverContent className="w-[200px] p-0">
                   <Command>
-                    <CommandInput
-                      placeholder="Search framework..."
-                      className="h-9"
-                    />
+                    <CommandInput placeholder="Search framework..." className="h-9" />
                     <CommandList>
                       <CommandEmpty>No framework found.</CommandEmpty>
                       <CommandGroup>
@@ -108,16 +99,14 @@ export default function ComboboxForm() {
                             value={language.label}
                             key={language.value}
                             onSelect={() => {
-                              form.setValue("language", language.value)
+                              form.setValue("language", language.value);
                             }}
                           >
                             {language.label}
                             <CheckIcon
                               className={cn(
                                 "ml-auto h-4 w-4",
-                                language.value === field.value
-                                  ? "opacity-100"
-                                  : "opacity-0"
+                                language.value === field.value ? "opacity-100" : "opacity-0",
                               )}
                             />
                           </CommandItem>
@@ -137,5 +126,5 @@ export default function ComboboxForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

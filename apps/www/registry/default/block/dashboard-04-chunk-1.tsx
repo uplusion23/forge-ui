@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/default/ui/button";
 import {
   Card,
   CardContent,
@@ -8,17 +8,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
-import { Input } from "@/registry/default/ui/input"
+} from "@/registry/default/ui/card";
+import { Input } from "@/registry/default/ui/input";
 
 export default function Component() {
   return (
     <Card x-chunk="dashboard-04-chunk-1">
       <CardHeader>
         <CardTitle>Store Name</CardTitle>
-        <CardDescription>
-          Used to identify your store in the marketplace.
-        </CardDescription>
+        <CardDescription>Used to identify your store in the marketplace.</CardDescription>
       </CardHeader>
       <CardContent>
         <form>
@@ -29,5 +27,5 @@ export default function Component() {
         <Button>Save</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

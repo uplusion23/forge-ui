@@ -1,0 +1,13 @@
+{
+  "name": "page-banner",
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "name": "page-banner.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { XIcon } from \"lucide-react\";\n\nimport { cn, cva, type VariantProps } from \"@/lib/utils\";\nimport { Button } from \"@/registry/dc/ui/button\";\n\nconst bannerVariants = cva(\n  \"sticky flex min-h-4 w-full items-center justify-center py-1 font-mono text-sm transition-all duration-200\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground\",\n        secondary: \"bg-secondary text-secondary-foreground\",\n        destructive: \"bg-destructive text-destructive-foreground\",\n        ghost: \"bg-transparent text-foreground\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  },\n);\n\nexport interface PageBannerProps\n  extends React.InputHTMLAttributes<HTMLDivElement>,\n    VariantProps<typeof bannerVariants> {\n  dismissable?: boolean;\n  animateDismiss?: boolean;\n  alwaysOnTop?: boolean;\n}\n\nconst PageBanner = ({\n  className,\n  variant,\n  children,\n  dismissable,\n  animateDismiss = true,\n  alwaysOnTop,\n  ...props\n}: PageBannerProps) => {\n  const [dismissed, setDismissed] = React.useState(false);\n  const [dismissing, setDismissing] = React.useState(false);\n\n  const dismiss = () => {\n    setDismissing(true);\n    setTimeout(() => {\n      setDismissed(true);\n    }, 1000);\n  };\n\n  return (\n    <div\n      className={cn(\n        bannerVariants({ variant }),\n        className,\n        dismissing && \"h-0 min-h-0 overflow-hidden py-0\",\n        dismissed && \"hidden\",\n        alwaysOnTop && \"sticky top-0 z-[999]\",\n      )}\n      {...props}\n    >\n      {children}\n      {dismissable && (\n        <Button variant=\"ghost\" className=\"absolute right-4 size-5 p-0\" onClick={() => dismiss()}>\n          <XIcon className=\"size-4 text-current\" />\n        </Button>\n      )}\n    </div>\n  );\n};\n\nexport { PageBanner };\n"
+    }
+  ],
+  "type": "components:ui"
+}

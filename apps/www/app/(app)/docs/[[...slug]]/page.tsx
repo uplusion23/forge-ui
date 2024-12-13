@@ -1,46 +1,45 @@
-import { allDocs } from "content-collections"
-import { notFound } from "next/navigation"
+import { notFound } from "next/navigation";
+import { allDocs } from "content-collections";
 
-import "@/styles/mdx.css"
-import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
-import type { Metadata } from "next"
-import Link from "next/link"
-import Balancer from "react-wrap-balancer"
+import "@/styles/mdx.css";
 
-import { Mdx } from "@/components/mdx-components"
-import { DocsPager } from "@/components/pager"
-import { DashboardTableOfContents } from "@/components/toc"
-import { TracingBeam } from "@/components/tracing-beam"
-import { siteConfig } from "@/config/site"
-import { getTableOfContents } from "@/lib/toc"
-import { absoluteUrl, cn } from "@/lib/utils"
-import { badgeVariants } from "@/registry/austin/ui/badge"
-import { ScrollArea } from "@/registry/austin/ui/scroll-area"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
+import Balancer from "react-wrap-balancer";
+
+import { siteConfig } from "@/config/site";
+import { getTableOfContents } from "@/lib/toc";
+import { absoluteUrl, cn } from "@/lib/utils";
+import { Mdx } from "@/components/mdx-components";
+import { DocsPager } from "@/components/pager";
+import { DashboardTableOfContents } from "@/components/toc";
+import { TracingBeam } from "@/components/tracing-beam";
+import { badgeVariants } from "@/registry/austin/ui/badge";
+import { ScrollArea } from "@/registry/austin/ui/scroll-area";
 
 interface DocPageProps {
   params: {
-    slug: string[]
-  }
+    slug: string[];
+  };
 }
 
 async function getDocFromParams({ params }: DocPageProps) {
-  const slug = params.slug?.join("/") || ""
-  const doc = allDocs.find((doc) => doc.slugAsParams === slug)
+  const slug = params.slug?.join("/") || "";
+  const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
   if (!doc) {
-    return null
+    return null;
   }
 
-  return doc
+  return doc;
 }
 
-export async function generateMetadata({
-  params,
-}: DocPageProps): Promise<Metadata> {
-  const doc = await getDocFromParams({ params })
+export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
+  const doc = await getDocFromParams({ params });
 
   if (!doc) {
-    return {}
+    return {};
   }
 
   return {
@@ -67,25 +66,23 @@ export async function generateMetadata({
       images: [siteConfig.ogImage],
       creator: "@uplusion23",
     },
-  }
+  };
 }
 
-export async function generateStaticParams(): Promise<
-  DocPageProps["params"][]
-> {
+export async function generateStaticParams(): Promise<DocPageProps["params"][]> {
   return allDocs.map((doc) => ({
     slug: doc.slugAsParams.split("/"),
-  }))
+  }));
 }
 
 export default async function DocPage({ params }: DocPageProps) {
-  const doc = await getDocFromParams({ params })
+  const doc = await getDocFromParams({ params });
 
   if (!doc) {
-    notFound()
+    notFound();
   }
 
-  const toc = await getTableOfContents(doc.content)
+  const toc = await getTableOfContents(doc.content);
 
   return (
     <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
@@ -101,9 +98,7 @@ export default async function DocPage({ params }: DocPageProps) {
           <div className="text-foreground">{doc.title}</div>
         </div>
         <div className="space-y-2">
-          <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
-            {doc.title}
-          </h1>
+          <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>{doc.title}</h1>
           {doc.description && (
             <p className="text-base text-muted-foreground">
               <Balancer>{doc.description}</Balancer>
@@ -153,5 +148,5 @@ export default async function DocPage({ params }: DocPageProps) {
         </div>
       )}
     </main>
-  )
+  );
 }

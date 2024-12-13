@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import Link from "next/link";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/registry/austin/ui/button"
-import { Checkbox } from "@/registry/austin/ui/checkbox"
+import { Button } from "@/registry/austin/ui/button";
+import { Checkbox } from "@/registry/austin/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -14,12 +14,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/austin/ui/form"
-import { toast } from "@/registry/austin/ui/use-toast"
+} from "@/registry/austin/ui/form";
+import { toast } from "@/registry/austin/ui/use-toast";
 
 const FormSchema = z.object({
   mobile: z.boolean().default(false).optional(),
-})
+});
 
 export default function CheckboxReactHookFormSingle() {
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -27,7 +27,7 @@ export default function CheckboxReactHookFormSingle() {
     defaultValues: {
       mobile: true,
     },
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -37,7 +37,7 @@ export default function CheckboxReactHookFormSingle() {
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -49,15 +49,10 @@ export default function CheckboxReactHookFormSingle() {
           render={({ field }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow">
               <FormControl>
-                <Checkbox
-                  checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
+                <Checkbox checked={field.value} onCheckedChange={field.onChange} />
               </FormControl>
               <div className="space-y-1 leading-none">
-                <FormLabel>
-                  Use different settings for my mobile devices
-                </FormLabel>
+                <FormLabel>Use different settings for my mobile devices</FormLabel>
                 <FormDescription>
                   You can manage your mobile notifications in the{" "}
                   <Link href="/examples/forms">mobile settings</Link> page.
@@ -69,5 +64,5 @@ export default function CheckboxReactHookFormSingle() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

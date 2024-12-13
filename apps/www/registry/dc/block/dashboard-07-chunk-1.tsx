@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { PlusCircle } from "lucide-react"
+import { PlusCircle } from "lucide-react";
 
-import { Button } from "@/registry/dc/ui/button"
+import { Button } from "@/registry/dc/ui/button";
 import {
   Card,
   CardContent,
@@ -10,9 +10,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/dc/ui/card"
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
+} from "@/registry/dc/ui/card";
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
 import {
   Table,
   TableBody,
@@ -20,17 +20,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/registry/dc/ui/table"
-import { ToggleGroup, ToggleGroupItem } from "@/registry/dc/ui/toggle-group"
+} from "@/registry/dc/ui/table";
+import { ToggleGroup, ToggleGroupItem } from "@/registry/dc/ui/toggle-group";
 
 export default function Component() {
   return (
     <Card x-chunk="dashboard-07-chunk-1">
       <CardHeader>
         <CardTitle>Stock</CardTitle>
-        <CardDescription>
-          Lipsum dolor sit amet, consectetur adipiscing elit
-        </CardDescription>
+        <CardDescription>Lipsum dolor sit amet, consectetur adipiscing elit</CardDescription>
       </CardHeader>
       <CardContent>
         <Table>
@@ -119,5 +117,5 @@ export default function Component() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

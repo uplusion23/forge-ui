@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/austin/ui/input-otp"
+} from "@/registry/austin/ui/input-otp";
 
 export default function InputOTPDemo() {
   return (
@@ -20,5 +20,5 @@ export default function InputOTPDemo() {
         <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

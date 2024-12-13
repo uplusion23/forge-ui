@@ -1,13 +1,7 @@
-"use client"
+"use client";
 
-import { Button } from "@/registry/dc/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/dc/ui/card"
+import { Button } from "@/registry/dc/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/dc/ui/card";
 
 export default function Component() {
   return (
@@ -24,5 +18,5 @@ export default function Component() {
         </Button>
       </CardContent>
     </Card>
-  )
+  );
 }

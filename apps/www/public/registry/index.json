@@ -291,6 +291,16 @@
     "type": "components:ui"
   },
   {
+    "name": "page-banner",
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "ui/page-banner.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "pagination",
     "registryDependencies": [
       "button"

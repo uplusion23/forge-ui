@@ -1,7 +1,7 @@
-import { BellIcon, CheckIcon } from "@radix-ui/react-icons"
+import { BellIcon, CheckIcon } from "@radix-ui/react-icons";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/registry/austin/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/registry/austin/ui/button";
 import {
   Card,
   CardContent,
@@ -9,8 +9,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
-import { Switch } from "@/registry/austin/ui/switch"
+} from "@/registry/austin/ui/card";
+import { Switch } from "@/registry/austin/ui/switch";
 
 const notifications = [
   {
@@ -25,9 +25,9 @@ const notifications = [
     title: "Your subscription is expiring soon!",
     description: "2 hours ago",
   },
-]
+];
 
-type CardProps = React.ComponentProps<typeof Card>
+type CardProps = React.ComponentProps<typeof Card>;
 
 export default function BadScreenUsage({ className, ...props }: CardProps) {
   return (
@@ -40,12 +40,8 @@ export default function BadScreenUsage({ className, ...props }: CardProps) {
         <div className=" flex items-center space-x-4 rounded-md border p-4">
           <BellIcon />
           <div className="flex-1 space-y-1">
-            <p className="text-sm font-medium leading-none">
-              Push Notifications
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Send notifications to device.
-            </p>
+            <p className="text-sm font-medium leading-none">Push Notifications</p>
+            <p className="text-sm text-muted-foreground">Send notifications to device.</p>
           </div>
           <Switch />
         </div>
@@ -57,12 +53,8 @@ export default function BadScreenUsage({ className, ...props }: CardProps) {
             >
               <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
               <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
-                  {notification.title}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {notification.description}
-                </p>
+                <p className="text-sm font-medium leading-none">{notification.title}</p>
+                <p className="text-sm text-muted-foreground">{notification.description}</p>
               </div>
             </div>
           ))}
@@ -74,5 +66,5 @@ export default function BadScreenUsage({ className, ...props }: CardProps) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

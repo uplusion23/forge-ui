@@ -1,16 +1,10 @@
-"use client"
+"use client";
 
-import { CaretDown } from "@phosphor-icons/react"
+import { CaretDown } from "@phosphor-icons/react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/dc/ui/avatar"
-import { Button } from "@/registry/dc/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/dc/ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/dc/ui/avatar";
+import { Button } from "@/registry/dc/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/dc/ui/card";
 import {
   Command,
   CommandEmpty,
@@ -18,21 +12,15 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@/registry/dc/ui/command"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/registry/dc/ui/popover"
+} from "@/registry/dc/ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "@/registry/dc/ui/popover";
 
 export function CardsTeamMembers() {
   return (
     <Card>
       <CardHeader>
         <CardTitle>Team Members</CardTitle>
-        <CardDescription>
-          Invite your team members to collaborate.
-        </CardDescription>
+        <CardDescription>Invite your team members to collaborate.</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-6">
         <div className="flex items-center justify-between space-x-4">
@@ -49,8 +37,7 @@ export function CardsTeamMembers() {
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
-                Owner{" "}
-                <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
+                Owner <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -61,15 +48,11 @@ export function CardsTeamMembers() {
                   <CommandGroup>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Viewer</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view and comment.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Can view and comment.</p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Developer</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Can view, comment and edit.</p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Billing</p>
@@ -103,8 +86,7 @@ export function CardsTeamMembers() {
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
-                Member{" "}
-                <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
+                Member <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -115,15 +97,11 @@ export function CardsTeamMembers() {
                   <CommandGroup className="p-1.5">
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Viewer</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view and comment.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Can view and comment.</p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Developer</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Can view, comment and edit.</p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Billing</p>
@@ -150,17 +128,14 @@ export function CardsTeamMembers() {
               <AvatarFallback>IN</AvatarFallback>
             </Avatar>
             <div>
-              <p className="text-sm font-medium leading-none">
-                Isabella Nguyen
-              </p>
+              <p className="text-sm font-medium leading-none">Isabella Nguyen</p>
               <p className="text-sm text-muted-foreground">i@example.com</p>
             </div>
           </div>
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="ml-auto">
-                Member{" "}
-                <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
+                Member <CaretDown className="ml-2 h-4 w-4 text-muted-foreground" />
               </Button>
             </PopoverTrigger>
             <PopoverContent className="p-0" align="end">
@@ -171,15 +146,11 @@ export function CardsTeamMembers() {
                   <CommandGroup className="p-1.5">
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Viewer</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view and comment.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Can view and comment.</p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Developer</p>
-                      <p className="text-sm text-muted-foreground">
-                        Can view, comment and edit.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Can view, comment and edit.</p>
                     </CommandItem>
                     <CommandItem className="teamaspace-y-1 flex flex-col items-start px-4 py-2">
                       <p>Billing</p>
@@ -201,5 +172,5 @@ export function CardsTeamMembers() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,10 +1,6 @@
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
 
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/registry/default/ui/input-otp"
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/registry/default/ui/input-otp";
 
 export default function InputOTPPattern() {
   return (
@@ -18,5 +14,5 @@ export default function InputOTPPattern() {
         <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

@@ -11,6 +11,6 @@ export const styles = [
     name: "dc",
     label: "D.C.",
   },
-] as const
+] as const;
 
-export type Style = (typeof styles)[number]
+export type Style = (typeof styles)[number];

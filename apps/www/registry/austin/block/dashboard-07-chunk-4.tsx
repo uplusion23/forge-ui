@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Upload } from "lucide-react"
+import Image from "next/image";
+import { Upload } from "lucide-react";
 
 import {
   Card,
@@ -9,16 +9,14 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 
 export default function Component() {
   return (
     <Card className="overflow-hidden" x-chunk="dashboard-07-chunk-4">
       <CardHeader>
         <CardTitle>Product Images</CardTitle>
-        <CardDescription>
-          Lipsum dolor sit amet, consectetur adipiscing elit
-        </CardDescription>
+        <CardDescription>Lipsum dolor sit amet, consectetur adipiscing elit</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid gap-2">
@@ -56,5 +54,5 @@ export default function Component() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

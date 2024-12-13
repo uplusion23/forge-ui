@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/registry/dc/ui/card"
+import { Card, CardContent } from "@/registry/dc/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/dc/ui/carousel"
+} from "@/registry/dc/ui/carousel";
 
 export default function CarouselSize() {
   return (
@@ -31,5 +31,5 @@ export default function CarouselSize() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

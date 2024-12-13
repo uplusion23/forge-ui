@@ -1,11 +1,11 @@
-import { Card, CardContent } from "@/registry/austin/ui/card"
+import { Card, CardContent } from "@/registry/austin/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/registry/austin/ui/carousel"
+} from "@/registry/austin/ui/carousel";
 
 export default function CarouselOrientation() {
   return (
@@ -32,5 +32,5 @@ export default function CarouselOrientation() {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
 import {
   Card,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/dc/ui/card"
+} from "@/registry/dc/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/dc/ui/chart"
+} from "@/registry/dc/ui/chart";
 
-export const description = "A line chart with dots"
+export const description = "A line chart with dots";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -27,7 +27,7 @@ const chartData = [
   { month: "April", desktop: 73, mobile: 190 },
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
-]
+];
 
 const chartConfig = {
   desktop: {
@@ -38,7 +38,7 @@ const chartConfig = {
     label: "Mobile",
     color: "hsl(var(--chart-2))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -65,10 +65,7 @@ export default function Component() {
               tickMargin={8}
               tickFormatter={(value) => value.slice(0, 3)}
             />
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
             <Line
               dataKey="desktop"
               type="natural"
@@ -93,5 +90,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

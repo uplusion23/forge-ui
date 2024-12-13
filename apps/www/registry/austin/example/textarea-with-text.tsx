@@ -1,5 +1,5 @@
-import { Label } from "@/registry/austin/ui/label"
-import { Textarea } from "@/registry/austin/ui/textarea"
+import { Label } from "@/registry/austin/ui/label";
+import { Textarea } from "@/registry/austin/ui/textarea";
 
 export default function TextareaWithText() {
   return (
@@ -10,5 +10,5 @@ export default function TextareaWithText() {
         Your message will be copied to the support team.
       </p>
     </div>
-  )
+  );
 }

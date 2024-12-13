@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Bar, BarChart, Rectangle, XAxis } from "recharts"
+import { Bar, BarChart, Rectangle, XAxis } from "recharts";
 
 import {
   Card,
@@ -8,8 +8,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
-import { ChartContainer } from "@/registry/austin/ui/chart"
+} from "@/registry/austin/ui/card";
+import { ChartContainer } from "@/registry/austin/ui/chart";
 
 export default function Component() {
   return (
@@ -23,9 +23,7 @@ export default function Component() {
       <CardContent className="flex flex-row items-baseline gap-4 p-4 pt-2">
         <div className="flex items-baseline gap-2 text-3xl font-bold tabular-nums leading-none">
           1,254
-          <span className="text-sm font-normal text-muted-foreground">
-            kcal/day
-          </span>
+          <span className="text-sm font-normal text-muted-foreground">kcal/day</span>
         </div>
         <ChartContainer
           config={{
@@ -83,16 +81,10 @@ export default function Component() {
               activeIndex={6}
               activeBar={<Rectangle fillOpacity={0.8} />}
             />
-            <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={4}
-              hide
-            />
+            <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={4} hide />
           </BarChart>
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

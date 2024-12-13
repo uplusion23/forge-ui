@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { NumberTicker } from "@/registry/dc/ui/number-ticker"
+import { NumberTicker } from "@/registry/dc/ui/number-ticker";
 
 export default function NumberTickerDemo() {
   return (
@@ -9,5 +9,5 @@ export default function NumberTickerDemo() {
         <NumberTicker value={100} direction="down" />
       </div>
     </div>
-  )
+  );
 }

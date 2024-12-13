@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Pie, PieChart } from "recharts"
+import { Pie, PieChart } from "recharts";
 
 import {
   Card,
@@ -8,15 +8,15 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/registry/austin/ui/card"
+} from "@/registry/austin/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartLegend,
   ChartLegendContent,
-} from "@/registry/austin/ui/chart"
+} from "@/registry/austin/ui/chart";
 
-export const description = "A pie chart with a legend"
+export const description = "A pie chart with a legend";
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -24,7 +24,7 @@ const chartData = [
   { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
   { browser: "other", visitors: 90, fill: "var(--color-other)" },
-]
+];
 
 const chartConfig = {
   visitors: {
@@ -50,7 +50,7 @@ const chartConfig = {
     label: "Other",
     color: "hsl(var(--chart-5))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -60,10 +60,7 @@ export default function Component() {
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
-        <ChartContainer
-          config={chartConfig}
-          className="mx-auto aspect-square max-h-[300px]"
-        >
+        <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[300px]">
           <PieChart>
             <Pie data={chartData} dataKey="visitors" />
             <ChartLegend
@@ -74,5 +71,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

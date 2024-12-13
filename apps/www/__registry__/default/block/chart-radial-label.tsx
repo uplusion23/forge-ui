@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { LabelList, RadialBar, RadialBarChart } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { LabelList, RadialBar, RadialBarChart } from "recharts";
 
 import {
   Card,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/default/ui/card"
+} from "@/registry/default/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/registry/default/ui/chart"
+} from "@/registry/default/ui/chart";
 
-export const description = "A radial chart with a label"
+export const description = "A radial chart with a label";
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -26,7 +26,7 @@ const chartData = [
   { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
   { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
   { browser: "other", visitors: 90, fill: "var(--color-other)" },
-]
+];
 
 const chartConfig = {
   visitors: {
@@ -52,7 +52,7 @@ const chartConfig = {
     label: "Other",
     color: "hsl(var(--chart-5))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export default function Component() {
   return (
@@ -62,10 +62,7 @@ export default function Component() {
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
-        <ChartContainer
-          config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
-        >
+        <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
           <RadialBarChart
             data={chartData}
             startAngle={-90}
@@ -97,5 +94,5 @@ export default function Component() {
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

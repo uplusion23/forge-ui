@@ -1,9 +1,9 @@
-import { MainNavItem, SidebarNavItem } from "types/nav"
+import { MainNavItem, SidebarNavItem } from "types/nav";
 
 export interface DocsConfig {
-  mainNav: MainNavItem[]
-  sidebarNav: SidebarNavItem[]
-  chartsNav: SidebarNavItem[]
+  mainNav: MainNavItem[];
+  sidebarNav: SidebarNavItem[];
+  chartsNav: SidebarNavItem[];
 }
 
 export const docsConfig: DocsConfig = {
@@ -254,6 +254,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Page Banner",
+          href: "/docs/components/page-banner",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Pagination",
           href: "/docs/components/pagination",
           items: [],
@@ -428,4 +434,4 @@ export const docsConfig: DocsConfig = {
       ],
     },
   ],
-}
+};

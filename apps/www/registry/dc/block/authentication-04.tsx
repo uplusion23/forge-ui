@@ -1,16 +1,16 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-import { Button } from "@/registry/dc/ui/button"
-import { Input } from "@/registry/dc/ui/input"
-import { Label } from "@/registry/dc/ui/label"
+import { Button } from "@/registry/dc/ui/button";
+import { Input } from "@/registry/dc/ui/input";
+import { Label } from "@/registry/dc/ui/label";
 
 export const description =
-  "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image."
+  "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image.";
 
-export const iframeHeight = "800px"
+export const iframeHeight = "800px";
 
-export const containerClassName = "w-full h-full p-4 lg:p-0"
+export const containerClassName = "w-full h-full p-4 lg:p-0";
 
 export default function Dashboard() {
   return (
@@ -26,20 +26,12 @@ export default function Dashboard() {
           <div className="grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
+              <Input id="email" type="email" placeholder="m@example.com" required />
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">
                 <Label htmlFor="password">Password</Label>
-                <Link
-                  href="/forgot-password"
-                  className="ml-auto inline-block text-sm underline"
-                >
+                <Link href="/forgot-password" className="ml-auto inline-block text-sm underline">
                   Forgot your password?
                 </Link>
               </div>
@@ -70,5 +62,5 @@ export default function Dashboard() {
         />
       </div>
     </div>
-  )
+  );
 }

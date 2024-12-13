@@ -1,15 +1,15 @@
-import { CardsActivityGoal } from "@/registry/dc/example/cards/activity-goal"
-import { CardsCalendar } from "@/registry/dc/example/cards/calendar"
-import { CardsChat } from "@/registry/dc/example/cards/chat"
-import { CardsCookieSettings } from "@/registry/dc/example/cards/cookie-settings"
-import { CardsCreateAccount } from "@/registry/dc/example/cards/create-account"
-import { CardsDataTable } from "@/registry/dc/example/cards/data-table"
-import { CardsMetric } from "@/registry/dc/example/cards/metric"
-import { CardsPaymentMethod } from "@/registry/dc/example/cards/payment-method"
-import { CardsReportIssue } from "@/registry/dc/example/cards/report-issue"
-import { CardsShare } from "@/registry/dc/example/cards/share"
-import { CardsStats } from "@/registry/dc/example/cards/stats"
-import { CardsTeamMembers } from "@/registry/dc/example/cards/team-members"
+import { CardsActivityGoal } from "@/registry/dc/example/cards/activity-goal";
+import { CardsCalendar } from "@/registry/dc/example/cards/calendar";
+import { CardsChat } from "@/registry/dc/example/cards/chat";
+import { CardsCookieSettings } from "@/registry/dc/example/cards/cookie-settings";
+import { CardsCreateAccount } from "@/registry/dc/example/cards/create-account";
+import { CardsDataTable } from "@/registry/dc/example/cards/data-table";
+import { CardsMetric } from "@/registry/dc/example/cards/metric";
+import { CardsPaymentMethod } from "@/registry/dc/example/cards/payment-method";
+import { CardsReportIssue } from "@/registry/dc/example/cards/report-issue";
+import { CardsShare } from "@/registry/dc/example/cards/share";
+import { CardsStats } from "@/registry/dc/example/cards/stats";
+import { CardsTeamMembers } from "@/registry/dc/example/cards/team-members";
 
 export default function CardsDemo() {
   return (
@@ -59,5 +59,5 @@ export default function CardsDemo() {
         </div>
       </div>
     </div>
-  )
+  );
 }

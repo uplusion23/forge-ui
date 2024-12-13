@@ -1,10 +1,10 @@
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/austin/ui/tooltip"
+} from "@/registry/austin/ui/tooltip";
 
 export default function TooltipDemo() {
   return (
@@ -18,5 +18,5 @@ export default function TooltipDemo() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
+  );
 }

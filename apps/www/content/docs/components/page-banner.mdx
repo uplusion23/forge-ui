@@ -1,0 +1,51 @@
+---
+title: Page Banner
+description: A simple component to show a persistent page banner
+component: true
+---
+
+<ComponentPreview name="page-banner-demo" description="A page banner with some text" />
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="cli">
+
+```bash
+bunx --bun @uplusion23/forge-ui add page-banner
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="page-banner" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { PageBanner } from "@/components/ui/page-banner"
+```
+
+```tsx
+<PageBanner dismissable>
+  We have new features! 🎉
+</PageBanner>
+```

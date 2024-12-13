@@ -1,19 +1,9 @@
-"use client"
+"use client";
 
-import { Area, AreaChart, XAxis, YAxis } from "recharts"
+import { Area, AreaChart, XAxis, YAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/registry/dc/ui/card"
-import {
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/registry/dc/ui/chart"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/registry/dc/ui/card";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/registry/dc/ui/chart";
 
 export default function Component() {
   return (
@@ -83,16 +73,8 @@ export default function Component() {
             <YAxis domain={["dataMin - 5", "dataMax + 2"]} hide />
             <defs>
               <linearGradient id="fillTime" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-time)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-time)"
-                  stopOpacity={0.1}
-                />
+                <stop offset="5%" stopColor="var(--color-time)" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="var(--color-time)" stopOpacity={0.1} />
               </linearGradient>
             </defs>
             <Area
@@ -110,9 +92,7 @@ export default function Component() {
                   Time in bed
                   <div className="ml-auto flex items-baseline gap-0.5 font-mono font-medium tabular-nums text-foreground">
                     {value}
-                    <span className="font-normal text-muted-foreground">
-                      hr
-                    </span>
+                    <span className="font-normal text-muted-foreground">hr</span>
                   </div>
                 </div>
               )}
@@ -121,5 +101,5 @@ export default function Component() {
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

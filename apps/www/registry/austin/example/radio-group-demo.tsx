@@ -1,5 +1,5 @@
-import { Label } from "@/registry/austin/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/registry/austin/ui/radio-group"
+import { Label } from "@/registry/austin/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/registry/austin/ui/radio-group";
 
 export default function RadioGroupDemo() {
   return (
@@ -17,5 +17,5 @@ export default function RadioGroupDemo() {
         <Label htmlFor="r3">Compact</Label>
       </div>
     </RadioGroup>
-  )
+  );
 }

@@ -313,6 +313,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "page-banner": {
+      name: "page-banner",
+      type: "components:ui",
+      registryDependencies: ["button"],
+      component: React.lazy(() => import("@/registry/default/ui/page-banner")),
+      source: "",
+      files: ["registry/default/ui/page-banner.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "pagination": {
       name: "pagination",
       type: "components:ui",
@@ -1464,6 +1475,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/default/example/number-ticker-demo-down")),
       source: "",
       files: ["registry/default/example/number-ticker-demo-down.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "page-banner-demo": {
+      name: "page-banner-demo",
+      type: "components:example",
+      registryDependencies: ["page-banner"],
+      component: React.lazy(() => import("@/registry/default/example/page-banner-demo")),
+      source: "",
+      files: ["registry/default/example/page-banner-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -3724,6 +3746,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "page-banner": {
+      name: "page-banner",
+      type: "components:ui",
+      registryDependencies: ["button"],
+      component: React.lazy(() => import("@/registry/austin/ui/page-banner")),
+      source: "",
+      files: ["registry/austin/ui/page-banner.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "pagination": {
       name: "pagination",
       type: "components:ui",
@@ -4875,6 +4908,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/austin/example/number-ticker-demo-down")),
       source: "",
       files: ["registry/austin/example/number-ticker-demo-down.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "page-banner-demo": {
+      name: "page-banner-demo",
+      type: "components:example",
+      registryDependencies: ["page-banner"],
+      component: React.lazy(() => import("@/registry/austin/example/page-banner-demo")),
+      source: "",
+      files: ["registry/austin/example/page-banner-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []
@@ -7135,6 +7179,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "page-banner": {
+      name: "page-banner",
+      type: "components:ui",
+      registryDependencies: ["button"],
+      component: React.lazy(() => import("@/registry/dc/ui/page-banner")),
+      source: "",
+      files: ["registry/dc/ui/page-banner.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "pagination": {
       name: "pagination",
       type: "components:ui",
@@ -8286,6 +8341,17 @@ export const Index: Record<string, any> = {
       component: React.lazy(() => import("@/registry/dc/example/number-ticker-demo-down")),
       source: "",
       files: ["registry/dc/example/number-ticker-demo-down.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "page-banner-demo": {
+      name: "page-banner-demo",
+      type: "components:example",
+      registryDependencies: ["page-banner"],
+      component: React.lazy(() => import("@/registry/dc/example/page-banner-demo")),
+      source: "",
+      files: ["registry/dc/example/page-banner-demo.tsx"],
       category: "undefined",
       subcategory: "undefined",
       chunks: []

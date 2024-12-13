@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
+import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts";
 
-import { Card, CardContent } from "@/registry/default/ui/card"
-import { ChartContainer } from "@/registry/default/ui/chart"
+import { Card, CardContent } from "@/registry/default/ui/card";
+import { ChartContainer } from "@/registry/default/ui/chart";
 
 export default function Component() {
   return (
@@ -14,27 +14,21 @@ export default function Component() {
             <div className="text-sm text-muted-foreground">Move</div>
             <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
               562/600
-              <span className="text-sm font-normal text-muted-foreground">
-                kcal
-              </span>
+              <span className="text-sm font-normal text-muted-foreground">kcal</span>
             </div>
           </div>
           <div className="grid flex-1 auto-rows-min gap-0.5">
             <div className="text-sm text-muted-foreground">Exercise</div>
             <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
               73/120
-              <span className="text-sm font-normal text-muted-foreground">
-                min
-              </span>
+              <span className="text-sm font-normal text-muted-foreground">min</span>
             </div>
           </div>
           <div className="grid flex-1 auto-rows-min gap-0.5">
             <div className="text-sm text-muted-foreground">Stand</div>
             <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
               8/12
-              <span className="text-sm font-normal text-muted-foreground">
-                hr
-              </span>
+              <span className="text-sm font-normal text-muted-foreground">hr</span>
             </div>
           </div>
         </div>
@@ -84,16 +78,11 @@ export default function Component() {
             startAngle={90}
             endAngle={450}
           >
-            <PolarAngleAxis
-              type="number"
-              domain={[0, 100]}
-              dataKey="value"
-              tick={false}
-            />
+            <PolarAngleAxis type="number" domain={[0, 100]} dataKey="value" tick={false} />
             <RadialBar dataKey="value" background cornerRadius={5} />
           </RadialBarChart>
         </ChartContainer>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Registry } from "@/registry/schema"
+import { Registry } from "@/registry/schema";
 
 const guideExamples: Registry = [
   {
@@ -25,7 +25,7 @@ const guideExamples: Registry = [
     registryDependencies: ["card", "switch", "button"],
     files: ["example/guide-screen-space-good.tsx"],
   },
-]
+];
 
 export const examples: Registry = [
   ...guideExamples,
@@ -520,6 +520,12 @@ export const examples: Registry = [
     files: ["example/number-ticker-demo-down.tsx"],
   },
   {
+    name: "page-banner-demo",
+    type: "components:example",
+    registryDependencies: ["page-banner"],
+    files: ["example/page-banner-demo.tsx"],
+  },
+  {
     name: "pagination-demo",
     type: "components:example",
     registryDependencies: ["pagination"],
@@ -923,4 +929,4 @@ export const examples: Registry = [
     type: "components:example",
     files: ["example/chart-tooltip-demo.tsx"],
   },
-]
+];

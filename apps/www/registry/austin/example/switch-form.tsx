@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from "@/registry/austin/ui/button"
+import { Button } from "@/registry/austin/ui/button";
 import {
   Form,
   FormControl,
@@ -12,14 +12,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-} from "@/registry/austin/ui/form"
-import { Switch } from "@/registry/austin/ui/switch"
-import { toast } from "@/registry/austin/ui/use-toast"
+} from "@/registry/austin/ui/form";
+import { Switch } from "@/registry/austin/ui/switch";
+import { toast } from "@/registry/austin/ui/use-toast";
 
 const FormSchema = z.object({
   marketing_emails: z.boolean().default(false).optional(),
   security_emails: z.boolean(),
-})
+});
 
 export default function SwitchForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -27,7 +27,7 @@ export default function SwitchForm() {
     defaultValues: {
       security_emails: true,
     },
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
@@ -37,7 +37,7 @@ export default function SwitchForm() {
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -58,10 +58,7 @@ export default function SwitchForm() {
                     </FormDescription>
                   </div>
                   <FormControl>
-                    <Switch
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
+                    <Switch checked={field.value} onCheckedChange={field.onChange} />
                   </FormControl>
                 </FormItem>
               )}
@@ -73,9 +70,7 @@ export default function SwitchForm() {
                 <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                   <div className="space-y-0.5">
                     <FormLabel>Security emails</FormLabel>
-                    <FormDescription>
-                      Receive emails about your account security.
-                    </FormDescription>
+                    <FormDescription>Receive emails about your account security.</FormDescription>
                   </div>
                   <FormControl>
                     <Switch
@@ -93,5 +88,5 @@ export default function SwitchForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

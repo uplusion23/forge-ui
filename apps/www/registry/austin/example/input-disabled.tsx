@@ -1,5 +1,5 @@
-import { Input } from "@/registry/austin/ui/input"
+import { Input } from "@/registry/austin/ui/input";
 
 export default function InputDisabled() {
-  return <Input disabled type="email" placeholder="Email" />
+  return <Input disabled type="email" placeholder="Email" />;
 }

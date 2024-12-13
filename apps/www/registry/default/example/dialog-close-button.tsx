@@ -1,6 +1,6 @@
-import { Copy } from "lucide-react"
+import { Copy } from "lucide-react";
 
-import { Button } from "@/registry/default/ui/button"
+import { Button } from "@/registry/default/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -10,9 +10,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/default/ui/dialog"
-import { Input } from "@/registry/default/ui/input"
-import { Label } from "@/registry/default/ui/label"
+} from "@/registry/default/ui/dialog";
+import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
 
 export default function DialogCloseButton() {
   return (
@@ -23,20 +23,14 @@ export default function DialogCloseButton() {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Share link</DialogTitle>
-          <DialogDescription>
-            Anyone who has this link will be able to view this.
-          </DialogDescription>
+          <DialogDescription>Anyone who has this link will be able to view this.</DialogDescription>
         </DialogHeader>
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
             <Label htmlFor="link" className="sr-only">
               Link
             </Label>
-            <Input
-              id="link"
-              defaultValue="https://forge-ui..dev/docs/installation"
-              readOnly
-            />
+            <Input id="link" defaultValue="https://forge-ui..dev/docs/installation" readOnly />
           </div>
           <Button type="submit" size="sm" className="px-3">
             <span className="sr-only">Copy</span>
@@ -52,5 +46,5 @@ export default function DialogCloseButton() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

@@ -1,13 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Component() {
   return (
-    <nav
-      className="grid gap-4 text-sm text-muted-foreground"
-      x-chunk="dashboard-04-chunk-0"
-    >
+    <nav className="grid gap-4 text-sm text-muted-foreground" x-chunk="dashboard-04-chunk-0">
       <Link href="#" className="font-semibold text-primary">
         General
       </Link>
@@ -17,5 +14,5 @@ export default function Component() {
       <Link href="#">Organizations</Link>
       <Link href="#">Advanced</Link>
     </nav>
-  )
+  );
 }
